@@ -8,8 +8,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ReolmarkedTeam15.ViewModels;
 
-namespace ReolmarkedTeam15
+namespace ReolmarkedTeam15.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -19,6 +20,7 @@ namespace ReolmarkedTeam15
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainViewModel();
         }
     }
 }
