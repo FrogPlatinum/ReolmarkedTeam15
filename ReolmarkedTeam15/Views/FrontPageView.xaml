@@ -12,6 +12,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="HEJ! Her er tomt.."/>
+        <TextBlock Grid.Row="0" Text="HEJ! Her er tomt.." FontSize="30"/>
+        <!-- Image as a placeholder >:) -->
+        <Image Source="/Views/RataVom.png"/>
     </Grid>
 </Page>

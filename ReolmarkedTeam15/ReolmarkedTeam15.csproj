@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\RataVom.png" />
     <None Remove="Views\StallLayout.png" />
   </ItemGroup>
 
@@ -18,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Views\RataVom.png" />
     <Resource Include="Views\StallLayout.png" />
   </ItemGroup>
 

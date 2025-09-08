@@ -25,13 +25,13 @@ namespace ReolmarkedTeam15.Views
             MainFrame.Navigate(new FrontPageView()); //makes the program display FrontPageView on startup :)
         }
 
-        private void ShowStallView_Click(object sender, RoutedEventArgs e)
+        private void ShowStallView_Click(object sender, RoutedEventArgs e) // Display "StallView" on click.
         {
            
             MainFrame.Navigate(new StallView());
         }
 
-        private void FrontPageView_Click(object sender, RoutedEventArgs e)
+        private void FrontPageView_Click(object sender, RoutedEventArgs e) // Display "FrontPageView" on click.
         {
             MainFrame.Navigate(new FrontPageView());
         }
