@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ReolmarkedTeam15.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="800">
+        Title="Reol Markedet" Height="900" Width="800">
     <Grid Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
