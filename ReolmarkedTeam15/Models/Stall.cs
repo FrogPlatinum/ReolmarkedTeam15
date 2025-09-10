@@ -10,7 +10,12 @@ namespace ReolmarkedTeam15.Models
     {
         //Attributes
         public int StallID { get; set; }
-        public bool AvailabilityStatus { get; set; }
+        public enum AvailabilityStatus
+        {
+            Ledig,
+            Optaget
+        }
+        public AvailabilityStatus Availability { get; set; }
         public enum StallTypes
         {
             A,
@@ -20,10 +25,10 @@ namespace ReolmarkedTeam15.Models
         public int Location {  get; set; }
 
         //Constructor
-        public Stall(int stallId, bool availabilityStatus, StallTypes stallType, int location)
+        public Stall(int stallId, AvailabilityStatus availability, StallTypes stallType, int location)
         {
             StallID = stallId;
-            AvailabilityStatus = availabilityStatus;
+            Availability = availability;
             StallType = stallType;
             Location = location;
         }

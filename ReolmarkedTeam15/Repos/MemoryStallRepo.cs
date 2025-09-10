@@ -16,13 +16,13 @@ namespace ReolmarkedTeam15.Repos
         //Constructor with sample data
         public MemoryStallRepo() 
         {
-            Stall sampleStall1 = new Stall(10,true,Stall.StallTypes.A,20);
+            Stall sampleStall1 = new Stall(10,Stall.AvailabilityStatus.Ledig,Stall.StallTypes.A,20);
             _stallList.Add(sampleStall1);
 
-            Stall sampleStall2 = new Stall(20, false, Stall.StallTypes.B, 30);
+            Stall sampleStall2 = new Stall(20, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 30);
             _stallList.Add(sampleStall2);
 
-            Stall sampleStall3 = new Stall(30, true, Stall.StallTypes.A, 40);
+            Stall sampleStall3 = new Stall(30, Stall.AvailabilityStatus.Ledig, Stall.StallTypes.A, 40);
             _stallList.Add(sampleStall3);
         }
 
@@ -66,7 +66,7 @@ namespace ReolmarkedTeam15.Repos
             {
                 if(stallToEdit.StallID == stall.StallID)
                 {
-                    stall.AvailabilityStatus = stallToEdit.AvailabilityStatus;
+                    stall.Availability = stallToEdit.Availability;
                     stall.StallType = stallToEdit.StallType;
                     stall.Location = stallToEdit.Location;
                 }
