@@ -22,7 +22,7 @@
         <DataGrid Grid.Column="0" Grid.Row="1" Background="White" ItemsSource="{Binding Stalls}" Margin="0,0,0,0" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Reol ID" Binding="{Binding StallID }" Width="3*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Udlejningsstatus" Binding="{Binding AvailabilityStatus}" Width="6*"/>
+                <DataGridTextColumn Header="Udlejningsstatus" Binding="{Binding Availability}" Width="6*"/>
                 <DataGridTextColumn Header="Indretning" Binding="{Binding StallType }" Width="4*"/>
                 <DataGridTextColumn Header="Placering" Binding="{Binding Location }" Width="4*"/>
             </DataGrid.Columns>
