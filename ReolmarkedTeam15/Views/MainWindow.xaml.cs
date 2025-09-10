@@ -8,6 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ReolmarkedTeam15.Interfaces;
+using ReolmarkedTeam15.Repos;
 using ReolmarkedTeam15.ViewModels;
 
 namespace ReolmarkedTeam15.Views
@@ -21,14 +23,20 @@ namespace ReolmarkedTeam15.Views
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainViewModel();
+
+            IStallRepo stallRepo = new MemoryStallRepo();
+            DataContext = new MainViewModel(stallRepo);
+
             MainFrame.Navigate(new FrontPageView()); //makes the program display FrontPageView on startup :)
         }
 
         private void ShowStallView_Click(object sender, RoutedEventArgs e) // Display "StallView" on click.
         {
-           
-            MainFrame.Navigate(new StallView());
+            //Dunno hvad de her metoder er, er det andre views? Googlede frem til at sætte datacontext til dem, det virker nu.
+            var stallView = new StallView();
+            stallView.DataContext = this.DataContext;
+            
+            MainFrame.Navigate(stallView);
         }
 
         private void FrontPageView_Click(object sender, RoutedEventArgs e) // Display "FrontPageView" on click.
