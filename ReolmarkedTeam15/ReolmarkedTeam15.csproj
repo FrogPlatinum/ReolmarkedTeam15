@@ -8,4 +8,20 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Views\RataVom.png" />
+    <None Remove="Views\StallLayout.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Repos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\RataVom.png" />
+    <Resource Include="Views\StallLayout.png" />
+  </ItemGroup>
+
+
 </Project>
