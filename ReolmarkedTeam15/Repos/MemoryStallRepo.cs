@@ -49,7 +49,7 @@ namespace ReolmarkedTeam15.Repos
         {
             foreach (Stall stall in _stallList)
             {
-                if(id == stall.StalldID)
+                if(id == stall.StallID)
                 {
                     return stall;
                 }    
@@ -64,7 +64,7 @@ namespace ReolmarkedTeam15.Repos
 
             foreach(Stall stall1 in _stallList)
             {
-                if(stallToEdit.StalldID == stall.StalldID)
+                if(stallToEdit.StallID == stall.StallID)
                 {
                     stall.AvailabilityStatus = stallToEdit.AvailabilityStatus;
                     stall.StallType = stallToEdit.StallType;
