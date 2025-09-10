@@ -9,7 +9,7 @@ namespace ReolmarkedTeam15.Models
     public class Stall
     {
         //Attributes
-        public int StalldID { get; set; }
+        public int StallID { get; set; }
         public bool AvailabilityStatus { get; set; }
         public enum StallTypes
         {
@@ -22,7 +22,7 @@ namespace ReolmarkedTeam15.Models
         //Constructor
         public Stall(int stallId, bool availabilityStatus, StallTypes stallType, int location)
         {
-            StalldID = stallId;
+            StallID = stallId;
             AvailabilityStatus = availabilityStatus;
             StallType = stallType;
             Location = location;
