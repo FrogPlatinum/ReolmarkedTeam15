@@ -19,7 +19,7 @@
         </Grid.RowDefinitions>
         <!-- Liste-->
         <Label Grid.Column="0" Grid.Row="0" Content="Liste Her!" Foreground="White"/>
-        <DataGrid Grid.Column="0" Grid.Row="1" Background="White" Margin="0,0,0,0"/>
+        <DataGrid Grid.Column="0" Grid.Row="1" Background="White" ItemsSource="{Binding Stalls}" AutoGenerateColumns="True" Margin="0,0,0,0"/>
         <!-- Oversigt-->
         <Label Grid.Column="1" Grid.Row="0" Content="Oversigt!" Margin="10,0,0,0" Foreground="White"/>
         <Image Grid.Column="1" Grid.Row="1" Source="/Views/StallLayout.png" Stretch="UniformToFill" Margin="10,0,0,0" />
