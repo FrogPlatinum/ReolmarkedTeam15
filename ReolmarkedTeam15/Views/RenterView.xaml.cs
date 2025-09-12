@@ -27,8 +27,8 @@ namespace ReolmarkedTeam15.Views
 
         private void AddRenter_Click(object sender, RoutedEventArgs e)
         {
-            //AddRenterView AddRenterWindow = new AddRenterVeiw();
-            //AddRenterWindow.Show();
+            AddRenterView AddRenterWindow = new AddRenterView();
+            AddRenterWindow.Show();
         }
     }
 }
