@@ -8,7 +8,9 @@
       d:DesignHeight="900" d:DesignWidth="900"
       Title="StallView">
 
-    <Grid Background="#6b7140">
+    <Grid Background="#793327">
+        <!-- ^ Anden farve:#6b7140 -->
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300"/>
             <ColumnDefinition Width="Auto"/>
@@ -22,9 +24,9 @@
         <DataGrid Grid.Column="0" Grid.Row="1" Background="White" ItemsSource="{Binding Stalls}" Margin="0,0,0,0" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Reol ID" Binding="{Binding StallID }" Width="3*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Udlejningsstatus" Binding="{Binding Availability}" Width="6*"/>
-                <DataGridTextColumn Header="Indretning" Binding="{Binding StallType }" Width="4*"/>
-                <DataGridTextColumn Header="Placering" Binding="{Binding Location }" Width="4*"/>
+                <DataGridTextColumn Header="Udlejningsstatus" Binding="{Binding Availability}" Width="6*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Indretning" Binding="{Binding StallType }" Width="4*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Placering" Binding="{Binding Location }" Width="4*" IsReadOnly="True"/>
             </DataGrid.Columns>
 
         </DataGrid>

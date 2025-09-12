@@ -23,5 +23,14 @@ namespace ReolmarkedTeam15.Views
         {
             InitializeComponent();
         }
+
+        private void SaveRenterDetails_Click(object sender, RoutedEventArgs e)
+        {
+
+        } 
+        private void ClearRenterDetails_Click(object sender, RoutedEventArgs e)
+        {
+         
+        }  
     }
 }

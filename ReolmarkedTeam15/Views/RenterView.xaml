@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
         d:DesignHeight="900" d:DesignWidth="900"
   Title="StallView">
-
+    <!--Bruger farver fra "Combination #249" https://colors.elwyn.co/-->
     <Grid Background="#547076">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="600"/>
@@ -18,9 +18,9 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <!-- Liste-->
-        <Label Grid.Column="0" Grid.Row="0" Content="Liste Her!" Foreground="White"/>
+        <Label Grid.Column="0" Grid.Row="0" Content="Liste over lejere og deres informationer" Foreground="White"/>
 
-        <DataGrid Grid.Column="0" Grid.Row="1" Background="White" ItemsSource="{Binding Renter>}" Margin="0,0,0,0" AutoGenerateColumns="False">
+        <DataGrid Grid.Column="0" Grid.Row="1" Background="White" ItemsSource="{Binding Renters>}" Margin="0,0,0,0" AutoGenerateColumns="False">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Lejer ID" Binding="{Binding RenterID }" Width="3*" IsReadOnly="True"/>
@@ -34,7 +34,7 @@
         </DataGrid>
 
         <!-- Oversigt-->
-        <Label Grid.Column="1" Grid.Row="0" Content="Tilføj Lejer" Margin="10,0,0,0" Foreground="White"/>
+        <Label Grid.Column="1" Grid.Row="0" Content="Rediger Lejere" Margin="10,0,0,0" Foreground="White"/>
         <Button Grid.Column="1" Grid.Row="1" Margin="10,0,0,0" Content="Tilføj Lejer" Click="AddRenter_Click" Height="26" VerticalAlignment="Bottom"/>
 
 
