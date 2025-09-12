@@ -26,7 +26,7 @@
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Lejer ID" Binding="{Binding RenterID }" Width="3*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Forvavn" Binding="{Binding RenterFirstName }" Width="4*"/>
+                <DataGridTextColumn Header="Fornavn" Binding="{Binding RenterFirstName }" Width="4*"/>
                 <DataGridTextColumn Header="Efternavn" Binding="{Binding RenterLastName }" Width="4*"/>
                 <DataGridTextColumn Header="Telefon" Binding="{Binding RenterPhoneNumber }" Width="5*"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding RenterEmail }" Width="8*"/>

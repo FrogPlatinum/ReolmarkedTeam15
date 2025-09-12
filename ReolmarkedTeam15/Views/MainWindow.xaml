@@ -18,7 +18,7 @@
 
         <StackPanel Grid.Row="0" Grid.Column="0" Background="#c2ae93" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0,0,0,0" Orientation="Horizontal" Height="30">
 
-            <Button Name="Button" Content="Forside" Height="25" Width="100" Margin="10,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ShowFrontPageView_Click" 
+            <Button Name="Button" Content="Forside" Height="25" Width="100" Margin="300,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ShowFrontPageView_Click" 
                      FontWeight="Bold" FontSize="15"/>
 
             <Button Name="Button1" Content="Reoler" Height="25" Width="100" Margin="0,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ShowStallView_Click"  FontWeight="Bold" FontSize="15"/>
