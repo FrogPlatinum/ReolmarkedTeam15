@@ -32,16 +32,25 @@ namespace ReolmarkedTeam15.Views
 
         private void ShowStallView_Click(object sender, RoutedEventArgs e) // Display "StallView" on click.
         {
-            //Dunno hvad de her metoder er, er det andre views? Googlede frem til at sætte datacontext til dem, det virker nu.
+            //Dunno hvad de her metoder er, er det andre views? Googlede frem til at sætte datacontext til dem, det virker nu. Amanda Note: De virkerede for mig uden det her :D
             var stallView = new StallView();
             stallView.DataContext = this.DataContext;
             
             MainFrame.Navigate(stallView);
         }
 
-        private void FrontPageView_Click(object sender, RoutedEventArgs e) // Display "FrontPageView" on click.
+        private void ShowFrontPageView_Click(object sender, RoutedEventArgs e) // Display "FrontPageView" on click.
         {
             MainFrame.Navigate(new FrontPageView());
+        }
+
+        private void ShowRenterView_Click(object sender, RoutedEventArgs e) // Display "RenterView" on click.
+        {
+            //Dunno hvad de her metoder er, er det andre views? Googlede frem til at sætte datacontext til dem, det virker nu.
+            var RenterView = new RenterView();
+            RenterView.DataContext = this.DataContext;
+
+            MainFrame.Navigate(RenterView);
         }
     } 
 }
