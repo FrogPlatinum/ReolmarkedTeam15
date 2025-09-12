@@ -5,12 +5,14 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ReolmarkedTeam15.Views"
       mc:Ignorable="d" 
-        d:DesignHeight="900" d:DesignWidth="900"
+      d:DesignHeight="900" d:DesignWidth="900"
+      FontFamily="Segoe UI"
+      FontSize="14"
   Title="StallView">
     <!--Bruger farver fra "Combination #249" https://colors.elwyn.co/-->
     <Grid Background="#547076">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="600"/>
+            <ColumnDefinition Width="700"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -27,7 +29,7 @@
                 <DataGridTextColumn Header="Forvavn" Binding="{Binding RenterFirstName }" Width="4*"/>
                 <DataGridTextColumn Header="Efternavn" Binding="{Binding RenterLastName }" Width="4*"/>
                 <DataGridTextColumn Header="Telefon" Binding="{Binding RenterPhoneNumber }" Width="5*"/>
-                <DataGridTextColumn Header="Email" Binding="{Binding RenterEmail }" Width="7*"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding RenterEmail }" Width="8*"/>
                 <DataGridTextColumn Header="Antal Reoler?" Binding="{Binding NumberOfStalls }" Width="4*"/>
             </DataGrid.Columns>
 

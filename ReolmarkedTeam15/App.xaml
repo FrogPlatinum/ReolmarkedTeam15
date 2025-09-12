@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:ReolmarkedTeam15"
              StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
-         
+      
     </Application.Resources>
 </Application>

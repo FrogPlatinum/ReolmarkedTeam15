@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:ReolmarkedTeam15.Views"
       mc:Ignorable="d" 
       d:DesignHeight="900" d:DesignWidth="900"
+      FontSize="14"
       Title="StallView">
 
     <Grid Background="#793327">
