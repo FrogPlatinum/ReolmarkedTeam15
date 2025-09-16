@@ -14,11 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Repos\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Views\RataVom.png" />
     <Resource Include="Views\StallLayout.png" />
   </ItemGroup>
