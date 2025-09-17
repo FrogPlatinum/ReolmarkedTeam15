@@ -1,0 +1,44 @@
+﻿<Page x:Class="ReolmarkedTeam15.Views.RenterView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ReolmarkedTeam15.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="900"
+      FontFamily="Segoe UI"
+      FontSize="14"
+  Title="StallView">
+    <!--Bruger farver fra "Combination #249" https://colors.elwyn.co/-->
+    <Grid Background="#547076">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="700"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!-- Liste-->
+        <Label Grid.Column="0" Grid.Row="0" Content="Liste over lejere og deres informationer" Foreground="White"/>
+
+        <DataGrid Grid.Column="0" Grid.Row="1" Background="White" ItemsSource="{Binding Renters>}" Margin="0,0,0,0" AutoGenerateColumns="False">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Lejer ID" Binding="{Binding RenterID }" Width="3*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Fornavn" Binding="{Binding RenterFirstName }" Width="4*"/>
+                <DataGridTextColumn Header="Efternavn" Binding="{Binding RenterLastName }" Width="4*"/>
+                <DataGridTextColumn Header="Telefon" Binding="{Binding RenterPhoneNumber }" Width="5*"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding RenterEmail }" Width="8*"/>
+                <DataGridTextColumn Header="Antal Reoler?" Binding="{Binding NumberOfStalls }" Width="4*"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+        <!-- Oversigt-->
+        <Label Grid.Column="1" Grid.Row="0" Content="Rediger Lejere" Margin="10,0,0,0" Foreground="White"/>
+        <Button Grid.Column="1" Grid.Row="1" Margin="10,0,0,0" Content="Tilføj Lejer" Click="AddRenter_Click" Height="26" VerticalAlignment="Bottom"/>
+
+
+    </Grid>
+</Page>

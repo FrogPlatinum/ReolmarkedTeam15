@@ -6,11 +6,14 @@
       xmlns:local="clr-namespace:ReolmarkedTeam15.Views"
       mc:Ignorable="d" 
       d:DesignHeight="900" d:DesignWidth="900"
+      FontSize="14"
       Title="StallView">
 
-    <Grid Background="#6b7140">
+    <Grid Background="#793327">
+        <!-- ^ Anden farve:#6b7140 -->
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="350"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -22,9 +25,9 @@
         <DataGrid Grid.Column="0" Grid.Row="1" Background="White" ItemsSource="{Binding Stalls}" Margin="0,0,0,0" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Reol ID" Binding="{Binding StallID }" Width="3*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Udlejningsstatus" Binding="{Binding Availability}" Width="6*"/>
-                <DataGridTextColumn Header="Indretning" Binding="{Binding StallType }" Width="4*"/>
-                <DataGridTextColumn Header="Placering" Binding="{Binding Location }" Width="4*"/>
+                <DataGridTextColumn Header="Udlejningsstatus" Binding="{Binding Availability}" Width="6*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Indretning" Binding="{Binding StallType }" Width="4*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Placering" Binding="{Binding Location }" Width="4*" IsReadOnly="True"/>
             </DataGrid.Columns>
 
         </DataGrid>

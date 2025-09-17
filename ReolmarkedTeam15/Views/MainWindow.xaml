@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ReolmarkedTeam15.Views"
         mc:Ignorable="d"
+        FontFamily="Calibri"
         Title="Reol Markedet" Height="900" Width="900">
     <Grid Background="Black">
         <Grid.ColumnDefinitions>
@@ -15,13 +16,14 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Grid.Column="0" Background="#f5ecc2" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0,0,0,0" Orientation="Horizontal" Height="30">
+        <StackPanel Grid.Row="0" Grid.Column="0" Background="#c2ae93" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0,0,0,0" Orientation="Horizontal" Height="30">
 
-            <Button Name="Button" Content="Forside (Hvid)" Height="25" Width="100" Margin="10,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="FrontPageView_Click"/>
-                
-                <Button Name="Button1" Content="Reoler (Grøn)" Height="25" Width="100" Margin="0,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ShowStallView_Click"/>
-                
-                <Button Name="Button2" Content="IngenFunktion" Height="25" Width="100" Margin="0,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button Name="Button" Content="Forside" Height="25" Width="100" Margin="280,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ShowFrontPageView_Click" 
+                     FontWeight="Bold" FontSize="15"/>
+
+            <Button Name="Button1" Content="Reoler" Height="25" Width="100" Margin="0,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ShowStallView_Click"  FontWeight="Bold" FontSize="15"/>
+
+            <Button Name="Button2" Content="Lejere" Height="25" Width="100" Margin="0,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ShowRenterView_Click"  FontWeight="Bold" FontSize="15"/>
             </StackPanel>
 
             <Frame Grid.Row="1" Grid.Column="0" x:Name="MainFrame" Margin="0,0,0,0" NavigationUIVisibility="Hidden" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
