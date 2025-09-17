@@ -14,7 +14,7 @@
     <None Remove="Views\StallLayout.png" />
   </ItemGroup>
 
-
+  <ItemGroup>
     <Folder Include="Interfaces\" />
     <Folder Include="Repos\" />
   </ItemGroup>
