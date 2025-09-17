@@ -51,15 +51,15 @@
         <TextBlock Grid.Row="5" Grid.Column="0" Margin="5,0,0,10" Text="Email:" FontSize="16"/>
         <TextBox Grid.Row="5" Grid.Column="1" Margin="0,0,50,10" FontSize="16"/>
 
-        <!--Tilføj Reol - Kan altid fjernes hvis vi valgte IKKE at gå med det. Bør kun vise en liste af LEDIGE reoler. (Column 0) + TextBox (Column 1)-->
+<!--Tilføj Reol - Kan altid fjernes hvis vi valgte IKKE at gå med det. Bør kun vise en liste af LEDIGE reoler. (Column 0) + TextBox (Column 1)-->
         <TextBlock Grid.Row="6" Grid.Column="0" Margin="5,0,0,10" Text="Reol:" FontSize="16"/>
         <ComboBox Grid.Row="6" Grid.Column="1" Margin="0,0,50,10" FontSize="16"
                   ItemsSource="{Binding Stalls}"
                SelectedItem="{Binding Stall, Mode=TwoWay}"
                  DisplayMemberPath="Location"/>
 
-        <!--Seperator her-->
-        <Separator Grid.Row="7" Grid.ColumnSpan="2" Margin="0,0,0,5" Background="#CCCCCC" Height="1"/>
+<!--Seperator her-->
+       <Separator Grid.Row="7" Grid.ColumnSpan="2" Margin="0,0,0,5" Background="#CCCCCC" Height="1"/>
         
 <!--Knapper her-->
 <!-- "Opret" Knap: -->
