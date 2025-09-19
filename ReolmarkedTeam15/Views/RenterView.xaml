@@ -22,7 +22,7 @@
         <!-- Liste-->
         <Label Grid.Column="0" Grid.Row="0" Content="Liste over lejere og deres informationer" Foreground="White"/>
 
-        <DataGrid Grid.Column="0" Grid.Row="1" Background="White" ItemsSource="{Binding RenterList>}" Margin="0,0,0,0" AutoGenerateColumns="False">
+        <DataGrid Grid.Column="0" Grid.Row="1" Background="White" ItemsSource="{Binding Renters}" Margin="0,0,0,0" AutoGenerateColumns="False">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Lejer ID" Binding="{Binding RenterID }" Width="3*" IsReadOnly="True"/>
