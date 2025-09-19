@@ -10,6 +10,7 @@ namespace ReolmarkedTeam15.Models
     {
         //Attributes
         public int StallID { get; set; }
+        public int RenterID { get; set; }
         public enum AvailabilityStatus
         {
             Ledig,
@@ -31,6 +32,11 @@ namespace ReolmarkedTeam15.Models
             Availability = availability;
             StallType = stallType;
             Location = location;
+        }
+        public void AssignRenter(int renterId)
+        {
+            RenterID = renterId;
+            Availability = AvailabilityStatus.Optaget;
         }
     }
 }
