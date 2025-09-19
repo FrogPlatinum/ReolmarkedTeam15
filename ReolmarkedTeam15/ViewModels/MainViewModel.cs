@@ -13,23 +13,12 @@ namespace ReolmarkedTeam15.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        //Repo for data access
-        private IStallRepo _stallRepo;
-
-        //List for WPF
-        public ObservableCollection<Stall> Stalls { get; set; }
+        public StallViewModel StallViewM { get; }
 
         public MainViewModel(IStallRepo stallRepo)
         {
-            //Injecting repo from mainwindow to here
-            _stallRepo = stallRepo;
-
-            //Getting list from data access repo and putting it into WPF list
-            Stalls = new ObservableCollection<Stall>(_stallRepo.GetAll());
+            StallViewM = new StallViewModel(stallRepo);
         }
-
-
-
 
 
 
