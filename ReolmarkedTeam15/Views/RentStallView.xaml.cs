@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ReolmarkedTeam15.Views
 {
     /// <summary>
-    /// Interaction logic for StallView.xaml
+    /// Interaction logic for RentStallView.xaml
     /// </summary>
-    public partial class StallView : Page
+    public partial class RentStallView : Window
     {
-        public StallView()
+        public RentStallView()
         {
             InitializeComponent();
-        }
-
-        private void RentOutStall_Click(object sender, RoutedEventArgs e)
-        {
-            RentStallView RentStallWindow = new RentStallView();
-            RentStallWindow.Show();
         }
     }
 }

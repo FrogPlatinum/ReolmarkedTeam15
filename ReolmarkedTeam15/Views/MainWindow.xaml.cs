@@ -46,7 +46,7 @@ namespace ReolmarkedTeam15.Views
 
         private void ShowRenterView_Click(object sender, RoutedEventArgs e) // Display "RenterView" on click.
         {
-            //Dunno hvad de her metoder er, er det andre views? Googlede frem til at sætte datacontext til dem, det virker nu.
+            
             var RenterView = new RenterView();
             RenterView.DataContext = this.DataContext;
 

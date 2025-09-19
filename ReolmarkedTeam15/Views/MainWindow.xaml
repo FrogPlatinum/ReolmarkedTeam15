@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ReolmarkedTeam15.Views"
         mc:Ignorable="d"
         FontFamily="Calibri"
-        Title="Reol Markedet" Height="900" Width="900">
+        Title="Reol Markedet" Height="900" Width="1000">
     <Grid Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>

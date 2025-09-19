@@ -1,0 +1,52 @@
+﻿<Window x:Class="ReolmarkedTeam15.Views.RentStallView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ReolmarkedTeam15.Views"
+        mc:Ignorable="d"
+        Title="" Height="250" Width="400">
+        
+    <!--Bruger farver fra "Combination #249" https://colors.elwyn.co/-->
+    <!-- Note! This whole thing COULD also be made into a "page" within the RenterView...-->
+    <Grid Background="#547076">
+
+        <!--Her viser vi hvor mange rækker der skal være og hvor store de er-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!--Her viser vi hvor mange kolonner der skal være og hvor store de er-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Overskrit her-->
+        <Label Grid.Row="0" Content="Udlej Reol" Grid.ColumnSpan="2" Foreground="#c2ae93" FontWeight="Bold" FontSize="16"/>
+
+        <!--Seperator her-->
+        <Separator Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,5" Background="#c2ae93" Height="1"/>
+
+        <!--Reol Valgt (visning) TextBlock (Column 0) + TextBlock (Column 1)-->
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="5,0,0,10" Text="Reol Valgt:" FontSize="16"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Margin="0,0,50,10" Text="Binding" FontSize="16" FontWeight="DemiBold"/>
+
+        <!--Vælg Lejer TextBlock (Column 0) + ComboBox (Column 1)-->
+        <TextBlock Grid.Row="3" Grid.Column="0" Margin="5,0,0,10" Text="Vælg Lejer:" FontSize="16"/>
+        <ComboBox Grid.Row="3" Grid.Column="1" Margin="0,0,50,10" FontSize="16"/>
+
+        <!--Seperator her-->
+        <Separator Grid.Row="4" Grid.ColumnSpan="2" Margin="0,0,0,5" Background="#c2ae93" Height="1"/>
+
+        <!--Knapper her-->
+        <!-- "Udlej Knap: -->
+        <Button Grid.Row="5" Grid.Column="0" Margin="-30,5,0,0" Width="50" Content="Udlej" FontWeight="Bold" FontSize="14"/>
+        
+
+    </Grid>
+</Window>
