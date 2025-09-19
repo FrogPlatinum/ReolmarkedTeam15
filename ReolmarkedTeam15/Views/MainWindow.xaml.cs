@@ -19,22 +19,29 @@ namespace ReolmarkedTeam15.Views
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Field to keep repo instant the same across pages
+        private IStallRepo _stallRepo;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            IStallRepo stallRepo = new MemoryStallRepo();
-            DataContext = new MainViewModel(stallRepo);
+            //Repo creation, currently set to MemoryRepos
+            _stallRepo = new MemoryStallRepo();
+
+            //Passing repo to MainViewModel
+            DataContext = new MainViewModel(_stallRepo);
 
             MainFrame.Navigate(new FrontPageView()); //makes the program display FrontPageView on startup :)
         }
 
         private void ShowStallView_Click(object sender, RoutedEventArgs e) // Display "StallView" on click.
         {
-            //Dunno hvad de her metoder er, er det andre views? Googlede frem til at sætte datacontext til dem, det virker nu. Amanda Note: De virkerede for mig uden det her :D
+            
             var stallView = new StallView();
-            stallView.DataContext = this.DataContext;
+            
+            //Stall view context set to StallViewModel
+            stallView.DataContext = new StallViewModel(_stallRepo);
             
             MainFrame.Navigate(stallView);
         }
@@ -46,7 +53,6 @@ namespace ReolmarkedTeam15.Views
 
         private void ShowRenterView_Click(object sender, RoutedEventArgs e) // Display "RenterView" on click.
         {
-            //Dunno hvad de her metoder er, er det andre views? Googlede frem til at sætte datacontext til dem, det virker nu.
             var RenterView = new RenterView();
             RenterView.DataContext = this.DataContext;
 
