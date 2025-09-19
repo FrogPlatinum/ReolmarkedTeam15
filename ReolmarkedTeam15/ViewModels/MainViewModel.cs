@@ -13,11 +13,13 @@ namespace ReolmarkedTeam15.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        public StallViewModel StallViewM { get; }
+        public StallViewModel StallVM { get; }
+        public RenterViewModel RenterVM { get; }
 
-        public MainViewModel(IStallRepo stallRepo)
+        public MainViewModel(IStallRepo stallRepo, IRenterRepo renterRepo)
         {
-            StallViewM = new StallViewModel(stallRepo);
+            StallVM = new StallViewModel(stallRepo);
+            RenterVM = new RenterViewModel(renterRepo);
         }
 
 

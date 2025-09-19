@@ -21,6 +21,7 @@ namespace ReolmarkedTeam15.Views
     {
         //Field to keep repo instant the same across pages
         private IStallRepo _stallRepo;
+        private IRenterRepo _renterRepo;
 
         public MainWindow()
         {
@@ -28,9 +29,10 @@ namespace ReolmarkedTeam15.Views
 
             //Repo creation, currently set to MemoryRepos
             _stallRepo = new MemoryStallRepo();
+            _renterRepo = new MemoryRenterRepo();
 
             //Passing repo to MainViewModel
-            DataContext = new MainViewModel(_stallRepo);
+            DataContext = new MainViewModel(_stallRepo, _renterRepo);
 
             MainFrame.Navigate(new FrontPageView()); //makes the program display FrontPageView on startup :)
         }
@@ -54,7 +56,9 @@ namespace ReolmarkedTeam15.Views
         private void ShowRenterView_Click(object sender, RoutedEventArgs e) // Display "RenterView" on click.
         {
             var RenterView = new RenterView();
-            RenterView.DataContext = this.DataContext;
+
+            //Renter view context set to RenterViewModel
+            RenterView.DataContext = new RenterViewModel(_renterRepo);
 
             MainFrame.Navigate(RenterView);
         }
