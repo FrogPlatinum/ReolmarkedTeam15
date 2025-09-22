@@ -8,7 +8,7 @@
         Title="" Height="250" Width="400">
         
     <!--Bruger farver fra "Combination #249" https://colors.elwyn.co/-->
-    <!-- Note! This whole thing COULD also be made into a "page" within the RenterView...-->
+    
     <Grid Background="#547076">
 
         <!--Her viser vi hvor mange rækker der skal være og hvor store de er-->
