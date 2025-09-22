@@ -11,6 +11,7 @@
   Title="StallView">
     <!--Bruger farver fra "Combination #249" https://colors.elwyn.co/-->
     <Grid Background="#547076">
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="700"/>
             <ColumnDefinition Width="Auto"/>
@@ -19,9 +20,11 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <!-- Liste-->
+        
+        <!-- Liste overskrift-->
         <Label Grid.Column="0" Grid.Row="0" Content="Liste over lejere og deres informationer" Foreground="White"/>
-
+        
+        <!-- Liste i Datagrid-->
         <DataGrid Grid.Column="0" Grid.Row="1" Background="White" ItemsSource="{Binding Renters}" Margin="0,0,0,0" AutoGenerateColumns="False">
 
             <DataGrid.Columns>
@@ -35,8 +38,10 @@
 
         </DataGrid>
 
-        <!-- Rediger Lejer-->
+        <!-- Rediger Lejer overskrift-->
         <Label Grid.Column="1" Grid.Row="0" Content="Rediger Lejere" Margin="10,0,0,0" Foreground="White"/>
+        
+        <!-- Knapper til redigering af lejere.-->
         <Button Grid.Column="1" Grid.Row="1" Margin="10,0,0,0" Content="Tilføj Lejer" Click="AddRenter_Click" Height="26" VerticalAlignment="Top" FontWeight="SemiBold"/>
 
 
