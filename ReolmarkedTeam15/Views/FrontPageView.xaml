@@ -13,10 +13,14 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
+        
+        <!--Header with company name-->
         <TextBlock Grid.Row="0" Text="Middelby Reolmarked" FontSize="50" Margin="0,20,0,0" HorizontalAlignment="Center"  FontFamily="Garamond" FontWeight="Heavy" TextDecorations="OverLine, Underline"  Foreground="#793327"/>
-        <!-- Image as a placeholder >:) -->
+        
+        <!-- Image -->
         <Image Source="/Views/F_f6c0LiMJZp2ubH.jpg" Margin="0,127,0,-219" Opacity="0.70" Width="600" HorizontalAlignment="Center"/>
-
+        
+        <!-- Label with quote -->
         <Label Content="'Inspirerende quote her! Fordi det bare er så hyggeligt!' -Jonas" Margin="0,100,0,0" HorizontalAlignment="Center" FontStyle="Italic"/>
     </Grid>
 </Page>

@@ -8,6 +8,7 @@
         FontFamily="Calibri"
         Title="Reol Markedet" Height="900" Width="1000">
     <Grid Background="Black">
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
@@ -15,7 +16,8 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
+        
+        <!-- Stack panel with buttons to nagivate through the different pages.-->
         <StackPanel Grid.Row="0" Grid.Column="0" Background="#c2ae93" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="0,0,0,0" Orientation="Horizontal" Height="30">
 
             <Button Name="Button" Content="Forside" Height="25" Width="100" Margin="280,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ShowFrontPageView_Click" 
@@ -25,7 +27,8 @@
 
             <Button Name="Button2" Content="Lejere" Height="25" Width="100" Margin="0,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ShowRenterView_Click"  FontWeight="Bold" FontSize="15"/>
             </StackPanel>
-
+        
+            <!--Defining where the pages are displayed via Frame-->
             <Frame Grid.Row="1" Grid.Column="0" x:Name="MainFrame" Margin="0,0,0,0" NavigationUIVisibility="Hidden" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
             
      
