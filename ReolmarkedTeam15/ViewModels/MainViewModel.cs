@@ -13,6 +13,7 @@ namespace ReolmarkedTeam15.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
+        //Instances of sub viewmodels
         public StallViewModel StallVM { get; }
         public RenterViewModel RenterVM { get; }
 
