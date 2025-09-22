@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <None Remove="Views\F_f6c0LiMJZp2ubH.jpg" />
-    <None Remove="Views\RataVom.png" />
     <None Remove="Views\StallLayout.png" />
   </ItemGroup>
 
@@ -21,8 +20,6 @@
 
   <ItemGroup>
     <Resource Include="Views\F_f6c0LiMJZp2ubH.jpg" />
-
-    <Resource Include="Views\RataVom.png" />
     <Resource Include="Views\StallLayout.png" />
   </ItemGroup>
 

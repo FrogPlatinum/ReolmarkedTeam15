@@ -30,14 +30,14 @@
                 <DataGridTextColumn Header="Efternavn" Binding="{Binding RenterLastName }" Width="4*"/>
                 <DataGridTextColumn Header="Telefon" Binding="{Binding RenterPhoneNumber }" Width="5*"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding RenterEmail }" Width="8*"/>
-                <DataGridTextColumn Header="Antal Reoler?" Binding="{Binding NumberOfStalls }" Width="4*"/>
+               
             </DataGrid.Columns>
 
         </DataGrid>
 
         <!-- Rediger Lejer-->
         <Label Grid.Column="1" Grid.Row="0" Content="Rediger Lejere" Margin="10,0,0,0" Foreground="White"/>
-        <Button Grid.Column="1" Grid.Row="1" Margin="10,0,0,0" Content="Tilføj Lejer" Click="AddRenter_Click" Height="26" VerticalAlignment="Bottom"/>
+        <Button Grid.Column="1" Grid.Row="1" Margin="10,0,0,0" Content="Tilføj Lejer" Click="AddRenter_Click" Height="26" VerticalAlignment="Top" FontWeight="SemiBold"/>
 
 
     </Grid>
