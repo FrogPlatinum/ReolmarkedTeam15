@@ -44,8 +44,8 @@
             <Button Content="Udlej Reol" HorizontalAlignment="Center" Width="80" FontWeight="SemiBold" Margin="0,0,0,10"
                     Click="RentOutStall_Click" IsEnabled="{Binding IsStallSelected}"/>
         <!--Jeg tænker det giver mening også at have disse to knapper :)--> 
-            <Button Content="Gør Ledig" HorizontalAlignment="Center" Width="80" FontWeight="SemiBold" Margin="0,0,0,10"></Button>
-            <Button Content="Rediger" HorizontalAlignment="Center" Width="80" FontWeight="SemiBold" ></Button>
+            <Button Content="Gør Ledig" HorizontalAlignment="Center" Width="80" FontWeight="SemiBold" Margin="0,0,0,10" IsEnabled="False"></Button>
+            <Button Content="Rediger" HorizontalAlignment="Center" Width="80" FontWeight="SemiBold" IsEnabled="False" ></Button>
         </StackPanel>
         
         <!-- Oversigt overskrift-->
