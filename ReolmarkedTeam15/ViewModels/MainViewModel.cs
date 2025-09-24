@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using ReolmarkedTeam15.Interfaces;
 using ReolmarkedTeam15.Models;
+using ReolmarkedTeam15.Helpers;
 
 namespace ReolmarkedTeam15.ViewModels
 {
-    public class MainViewModel : INotifyPropertyChanged
+    public class MainViewModel : BaseViewModel
     {
         //Instances of sub viewmodels
         public StallViewModel StallVM { get; }
@@ -27,13 +28,13 @@ namespace ReolmarkedTeam15.ViewModels
 
 
 
-        //PropertyChangedHandler
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged
-        ([CallerMemberName] string name = null)
-        {
-            PropertyChanged?.Invoke
-            (this, new PropertyChangedEventArgs(name));
-        }
+        ////PropertyChangedHandler - Commented out since it's in BaseViewModel now.
+        //public event PropertyChangedEventHandler PropertyChanged;
+        //protected void OnPropertyChanged
+        //([CallerMemberName] string name = null)
+        //{
+        //    PropertyChanged?.Invoke
+        //    (this, new PropertyChangedEventArgs(name));
+        //}
     }
 }
