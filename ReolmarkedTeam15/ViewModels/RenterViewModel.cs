@@ -17,11 +17,12 @@ namespace ReolmarkedTeam15.ViewModels
 {
     public class RenterViewModel : BaseViewModel
     {
+        // --------------------- Properties!
         private IRenterRepo _renterRepo;
 
         public ObservableCollection<Renter> Renters { get; }
 
-
+        
         private string _renterFirstName;
         public string RenterFirstName
         {
@@ -78,7 +79,7 @@ namespace ReolmarkedTeam15.ViewModels
                 }
             }
         }
-
+        // --------------------- Constructor!
         public RenterViewModel(IRenterRepo renterRepo)
         {
             _renterRepo = renterRepo;
@@ -89,7 +90,7 @@ namespace ReolmarkedTeam15.ViewModels
 
 
 
-        // --------------------- 4. Methods!
+        // --------------------- Methods!
 
         //Commented out till I figure out ID.
         // Metode til at lave nyt Renter objekt ud fra tekstfelter.
@@ -115,10 +116,10 @@ namespace ReolmarkedTeam15.ViewModels
         // Metode til at rydde tekstfelter i View.
         private void ClearFields()
         {
-            RenterFirstName = null;
-            RenterLastName = null;
-            RenterPhoneNumber = null;
-            RenterEmail = null;
+            RenterFirstName = string.Empty;
+            RenterLastName = string.Empty;
+            RenterPhoneNumber = string.Empty;
+            RenterEmail = string.Empty;
         }
 
         //Metode til at tjekke om renter kan oprettes.(måske ikke helt færdig)
@@ -127,7 +128,8 @@ namespace ReolmarkedTeam15.ViewModels
             return RenterFirstName != null && RenterLastName != null && (RenterPhoneNumber != null || RenterEmail !=null); //FirstName+LastName SKAL udfyldes + Enten Email ELLER Phone skal udfyldes.
         }
 
-        // --------------------- 5. Commands til UI
+        // --------------------- Commands til UI
+
         //Commented out till I figure out ID.
         // public RelayCommand RegisterRenterCommand => new RelayCommand(execute => RegisterRenter()); 
        // RelayCommand Bruger metode "ClearFields()" til at rydde tekstfelter i View.
