@@ -13,13 +13,13 @@
         <!-- ^ Anden farve:#6b7140 -->
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="360"/>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="800"/>
         </Grid.RowDefinitions>
         
         <!-- Liste overskrift-->
@@ -33,7 +33,7 @@
                 <DataGridTextColumn Header="Placering" Binding="{Binding Location }" Width="4*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Indretning" Binding="{Binding StallType }" Width="4*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Udlejningsstatus" Binding="{Binding Availability}" Width="6*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Lejes Af" Binding="{Binding StallRenterID }" Width="4*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Lejes Af" Binding="{Binding StallRenterID }" Width="3*" IsReadOnly="True"/>
                 
             </DataGrid.Columns>
 
