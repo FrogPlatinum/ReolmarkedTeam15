@@ -4,6 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ReolmarkedTeam15.Views"
+        xmlns:local2="clr-namespace:ReolmarkedTeam15.Helpers" 
+        xmlns:viewmodels="clr-namespace:ReolmarkedTeam15.ViewModels" 
+        d:DataContext="{d:DesignInstance Type=viewmodels:RenterViewModel}"
         mc:Ignorable="d"
         Title="" Height="280" Width="400">
 
@@ -37,19 +40,19 @@
         
 <!--Lejer Fornavn TextBlock (Column 0) + TextBox (Column 1)-->
         <TextBlock Grid.Row="2" Grid.Column="0" Margin="5,0,0,10" Text="Fornavn:" FontSize="16"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Margin="0,0,50,10" FontSize="16"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="0,0,50,10" FontSize="16" Text="{Binding RenterFirstName, UpdateSourceTrigger=PropertyChanged}"/>
         
 <!--Lejer Efternavn TextBlock (Column 0) + TextBox (Column 1)-->
         <TextBlock Grid.Row="3" Grid.Column="0" Margin="5,0,0,10" Text="Efternavn:" FontSize="16"/>
-        <TextBox Grid.Row="3" Grid.Column="1" Margin="0,0,50,10" FontSize="16"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="0,0,50,10" FontSize="16" Text="{Binding RenterLastName, UpdateSourceTrigger=PropertyChanged}"/>
         
 <!--Lejer Telefon TextBlock (Column 0) + TextBox (Column 1)-->
         <TextBlock Grid.Row="4" Grid.Column="0" Margin="5,0,0,10" Text="Telefon:" FontSize="16"/>
-        <TextBox Grid.Row="4" Grid.Column="1" Margin="0,0,50,10" FontSize="16"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Margin="0,0,50,10" FontSize="16" Text="{Binding RenterPhoneNumber, UpdateSourceTrigger=PropertyChanged}"/>
         
 <!--Lejer Email TextBlock (Column 0) + TextBox (Column 1)-->
         <TextBlock Grid.Row="5" Grid.Column="0" Margin="5,0,0,10" Text="Email:" FontSize="16"/>
-        <TextBox Grid.Row="5" Grid.Column="1" Margin="0,0,50,10" FontSize="16"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Margin="0,0,50,10" FontSize="16" Text="{Binding RenterEmail, UpdateSourceTrigger=PropertyChanged}"/>
 
         <!--Seperator her-->
        <Separator Grid.Row="6" Grid.ColumnSpan="2" Margin="0,0,0,5" Background="#CCCCCC" Height="1"/>
@@ -59,7 +62,7 @@
         <Button Grid.Row="7" Grid.Column="1" Margin="-215,0,0,0" Width="50" Content="Opret" FontWeight="Bold" FontSize="12"/>
 <!-- Hvis vi skal have en "Ryd" knap: -->
         <Button Grid.Row="7" Grid.Column="1" Margin="112,0,0,0" Width="50" Content="Ryd" Foreground="#793327" FontWeight="Bold" FontSize="12"
-                Command="{Binding ClearCommand}"/>
+                Command="{Binding ClearFieldsCommand}"/>
        
     </Grid>
 </Window>

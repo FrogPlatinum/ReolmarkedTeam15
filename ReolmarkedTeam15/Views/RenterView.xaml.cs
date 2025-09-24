@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ReolmarkedTeam15.Interfaces;
+using ReolmarkedTeam15.ViewModels;
+using ReolmarkedTeam15.Views;
 
 namespace ReolmarkedTeam15.Views
 {
@@ -20,14 +23,18 @@ namespace ReolmarkedTeam15.Views
     /// </summary>
     public partial class RenterView : Page
     {
+       
         public RenterView()
         {
             InitializeComponent();
+
+        
         }
 
         private void AddRenter_Click(object sender, RoutedEventArgs e)
         {
             AddRenterView AddRenterWindow = new AddRenterView();
+            AddRenterWindow.DataContext = this.DataContext;
             AddRenterWindow.Show();
         }
     }
