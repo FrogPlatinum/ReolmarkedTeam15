@@ -75,13 +75,13 @@ namespace ReolmarkedTeam15.Repos
             Stall sampleStall20 = new Stall(020, 10, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 20);
             _stallList.Add(sampleStall20);
 
-            Stall sampleStall21 = new Stall(021, 00, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 21);
+            Stall sampleStall21 = new Stall(021, 10, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 21);
             _stallList.Add(sampleStall21);
 
-            Stall sampleStall22 = new Stall(022, 00, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 22);
+            Stall sampleStall22 = new Stall(022, 10, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 22);
             _stallList.Add(sampleStall22);
 
-            Stall sampleStall23 = new Stall(023, 00, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 23);
+            Stall sampleStall23 = new Stall(023, 10, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 23);
             _stallList.Add(sampleStall23);
 
             Stall sampleStall24 = new Stall(024, 00, Stall.AvailabilityStatus.Ledig, Stall.StallTypes.B, 24);
