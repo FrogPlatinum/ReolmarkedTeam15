@@ -22,7 +22,6 @@ namespace ReolmarkedTeam15.ViewModels
 
         public ObservableCollection<Renter> Renters { get; }
 
-        
         private string _renterFirstName;
         public string RenterFirstName
         {
@@ -83,11 +82,12 @@ namespace ReolmarkedTeam15.ViewModels
         public RenterViewModel(IRenterRepo renterRepo)
         {
             _renterRepo = renterRepo;
-            Renters = new ObservableCollection<Renter>(_renterRepo.GetAll());
 
+            Renters = new ObservableCollection<Renter>(_renterRepo.GetAll());
+            
         }
 
-
+        
 
 
         // --------------------- Methods!

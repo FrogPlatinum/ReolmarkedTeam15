@@ -22,10 +22,16 @@ namespace ReolmarkedTeam15.ViewModels
         {
             StallVM = new StallViewModel(stallRepo);
             RenterVM = new RenterViewModel(renterRepo);
+
+            UpdateRenterStallCount();
         }
-
-
-
+        public void UpdateRenterStallCount()
+        {
+            foreach (var r in RenterVM.Renters)
+            {
+                r.NumberOfStallsRented = StallVM.Stalls.Count(o => o.RenterID == r.RenterID);
+            }
+        }
 
 
         ////PropertyChangedHandler - Commented out since it's in BaseViewModel now.
