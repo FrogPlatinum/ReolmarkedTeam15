@@ -23,7 +23,6 @@ namespace ReolmarkedTeam15.Repos
             _stallList.Add(sampleStall2);
 
             Stall sampleStall3 = new Stall(03, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.A, 3);
-            _stallList.Add(sampleStall3);
 
             Stall sampleStall4 = new Stall(04, Stall.AvailabilityStatus.Ledig, Stall.StallTypes.B, 4);
             _stallList.Add(sampleStall4);

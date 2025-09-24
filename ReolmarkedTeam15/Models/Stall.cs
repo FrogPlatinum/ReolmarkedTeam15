@@ -26,12 +26,13 @@ namespace ReolmarkedTeam15.Models
         public int Location {  get; set; }
 
         //Constructor
-        public Stall(int stallId, AvailabilityStatus availability, StallTypes stallType, int location)
+        public Stall(int stallId, int renterID, AvailabilityStatus availability, StallTypes stallType, int location)
         {
             StallID = stallId;
             Availability = availability;
             StallType = stallType;
             Location = location;
+            RenterID = renterID;
         }
         public void AssignRenter(int renterId)
         {
