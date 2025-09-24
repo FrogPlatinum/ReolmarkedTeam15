@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ReolmarkedTeam15.Interfaces;
 using ReolmarkedTeam15.ViewModels;
+using ReolmarkedTeam15.Repos;
 
 
 namespace ReolmarkedTeam15.Views
@@ -24,9 +25,11 @@ namespace ReolmarkedTeam15.Views
     {
         public AddRenterView()
         {
-            InitializeComponent();
+           InitializeComponent();
 
-           // DataContext = new RenterViewModel(); Unsure how to refer to the viewModel.
+            //IRenterRepo repo = new MemoryRenterRepo();
+            //DataContext = new RenterViewModel(repo);
+             
 
         }
 
