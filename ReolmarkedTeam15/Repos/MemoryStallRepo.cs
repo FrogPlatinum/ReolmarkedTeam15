@@ -16,13 +16,13 @@ namespace ReolmarkedTeam15.Repos
         //Constructor with sample data
         public MemoryStallRepo() 
         {
-            Stall sampleStall1 = new Stall(10,Stall.AvailabilityStatus.Ledig,Stall.StallTypes.A,20);
+            Stall sampleStall1 = new Stall(10, 20,Stall.AvailabilityStatus.Ledig,Stall.StallTypes.A,20);
             _stallList.Add(sampleStall1);
 
-            Stall sampleStall2 = new Stall(20, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 30);
+            Stall sampleStall2 = new Stall(20, 10, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 30);
             _stallList.Add(sampleStall2);
 
-            Stall sampleStall3 = new Stall(30, Stall.AvailabilityStatus.Ledig, Stall.StallTypes.A, 40);
+            Stall sampleStall3 = new Stall(30, 10, Stall.AvailabilityStatus.Ledig, Stall.StallTypes.A, 40);
             _stallList.Add(sampleStall3);
         }
 

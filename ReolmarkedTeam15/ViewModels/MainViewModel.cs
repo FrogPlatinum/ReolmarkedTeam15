@@ -21,10 +21,8 @@ namespace ReolmarkedTeam15.ViewModels
         public MainViewModel(IStallRepo stallRepo, IRenterRepo renterRepo)
         {
             StallVM = new StallViewModel(stallRepo);
-            RenterVM = new RenterViewModel(renterRepo);
+            RenterVM = new RenterViewModel(renterRepo, stallRepo);
         }
-
-
 
 
 
