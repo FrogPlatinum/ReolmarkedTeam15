@@ -33,7 +33,7 @@
                 <DataGridTextColumn Header="Efternavn" Binding="{Binding RenterLastName }" Width="4*"/>
                 <DataGridTextColumn Header="Telefon" Binding="{Binding RenterPhoneNumber }" Width="5*"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding RenterEmail }" Width="8*"/>
-                <DataGridTextColumn Header="Antal Reoler" Binding="{Binding  }" Width="4*"/>
+                <DataGridTextColumn Header="Antal Reoler" Binding="{Binding NumberOfStallsRented }" Width="4*"/>
                
             </DataGrid.Columns>
 
