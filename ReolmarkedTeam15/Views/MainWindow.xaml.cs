@@ -58,7 +58,7 @@ namespace ReolmarkedTeam15.Views
             var RenterView = new RenterView();
 
             //Renter view context set to RenterViewModel
-            RenterView.DataContext = new RenterViewModel(_renterRepo, _stallRepo);
+            RenterView.DataContext = new RenterViewModel(_renterRepo);
 
             MainFrame.Navigate(RenterView);
         }
