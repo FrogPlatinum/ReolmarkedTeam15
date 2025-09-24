@@ -18,7 +18,6 @@ namespace ReolmarkedTeam15.ViewModels
     public class RenterViewModel : BaseViewModel
     {
         private IRenterRepo _renterRepo;
-        private IStallRepo _stallRepo;
 
         public ObservableCollection<Renter> Renters { get; }
         
@@ -80,23 +79,15 @@ namespace ReolmarkedTeam15.ViewModels
             }
         }
 
-        public RenterViewModel(IRenterRepo renterRepo, IStallRepo stallRepo)
+        public RenterViewModel(IRenterRepo renterRepo)
         {
             _renterRepo = renterRepo;
-            _stallRepo = stallRepo;
 
             Renters = new ObservableCollection<Renter>(_renterRepo.GetAll());
-            UpdateRenterStallCount();
+            
         }
 
-        public void UpdateRenterStallCount()
-        {
-            foreach (var r in Renters)
-            {
-                r.NumberOfStallsRented = _stallRepo.GetAll().Count(o => o.RenterID == r.RenterID);
-            }
-            OnPropertyChanged(nameof(Renters));
-        }
+        
 
 
         // --------------------- 4. Methods!
