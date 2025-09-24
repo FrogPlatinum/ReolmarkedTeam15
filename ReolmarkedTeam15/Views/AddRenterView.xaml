@@ -56,9 +56,10 @@
         
 <!--Knapper her-->
 <!-- "Opret" Knap: -->
-        <Button Grid.Row="7" Grid.Column="1" Margin="-215,0,0,0" Width="50" Content="Opret" FontWeight="Bold" Click="SaveRenterDetails_Click" FontSize="12"/>
+        <Button Grid.Row="7" Grid.Column="1" Margin="-215,0,0,0" Width="50" Content="Opret" FontWeight="Bold" FontSize="12"/>
 <!-- Hvis vi skal have en "Ryd" knap: -->
-        <Button Grid.Row="7" Grid.Column="1" Margin="112,0,0,0" Width="50" Content="Ryd" Foreground="#793327" FontWeight="Bold" Click="ClearRenterDetails_Click" FontSize="12"/>
+        <Button Grid.Row="7" Grid.Column="1" Margin="112,0,0,0" Width="50" Content="Ryd" Foreground="#793327" FontWeight="Bold" FontSize="12"
+                Command="{Binding ClearCommand}"/>
        
     </Grid>
 </Window>

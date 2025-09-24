@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using ReolmarkedTeam15.Interfaces;
 using ReolmarkedTeam15.Models;
+using ReolmarkedTeam15.Helpers;
 
 namespace ReolmarkedTeam15.ViewModels
 {
-    public class StallViewModel : INotifyPropertyChanged
+    public class StallViewModel : BaseViewModel
     {
         //Repo
         private IStallRepo _stallRepo;
@@ -59,13 +60,13 @@ namespace ReolmarkedTeam15.ViewModels
             Stalls = new ObservableCollection<Stall>(_stallRepo.GetAll());
         }
 
-        //PropertyChangedHandler
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged
-        ([CallerMemberName] string name = null)
-        {
-            PropertyChanged?.Invoke
-            (this, new PropertyChangedEventArgs(name));
-        }
+        ////PropertyChangedHandler - Commented out since it's in BaseViewModel now.
+        //public event PropertyChangedEventHandler PropertyChanged;
+        //protected void OnPropertyChanged
+        //([CallerMemberName] string name = null)
+        //{
+        //    PropertyChanged?.Invoke
+        //    (this, new PropertyChangedEventArgs(name));
+        //}
     }
 }

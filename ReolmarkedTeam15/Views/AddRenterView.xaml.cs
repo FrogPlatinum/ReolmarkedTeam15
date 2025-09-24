@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ReolmarkedTeam15.Interfaces;
+using ReolmarkedTeam15.ViewModels;
+
 
 namespace ReolmarkedTeam15.Views
 {
@@ -22,15 +25,10 @@ namespace ReolmarkedTeam15.Views
         public AddRenterView()
         {
             InitializeComponent();
+
+           // DataContext = new RenterViewModel(); Unsure how to refer to the viewModel.
+
         }
 
-        private void SaveRenterDetails_Click(object sender, RoutedEventArgs e)
-        {
-
-        } 
-        private void ClearRenterDetails_Click(object sender, RoutedEventArgs e)
-        {
-         
-        }  
     }
 }
