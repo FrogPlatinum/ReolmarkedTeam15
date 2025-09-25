@@ -18,14 +18,14 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="800"/>
         </Grid.RowDefinitions>
         
         <!-- Liste overskrift-->
         <Label Grid.Column="0" Grid.Row="0" Content="Liste over lejere og deres informationer" Foreground="White"/>
         
         <!-- Liste i Datagrid-->
-        <DataGrid Grid.Column="0" Grid.Row="1" Background="White" ItemsSource="{Binding Renters}" Margin="0,0,0,0" AutoGenerateColumns="False">
+        <DataGrid Grid.Column="0" Grid.Row="1" Background="#547076" ItemsSource="{Binding Renters}" Margin="0,0,0,0" AutoGenerateColumns="False" BorderBrush="Transparent">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Lejer ID" Binding="{Binding RenterID }" Width="3*" IsReadOnly="True"/>
@@ -33,7 +33,7 @@
                 <DataGridTextColumn Header="Efternavn" Binding="{Binding RenterLastName }" Width="4*"/>
                 <DataGridTextColumn Header="Telefon" Binding="{Binding RenterPhoneNumber }" Width="5*"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding RenterEmail }" Width="8*"/>
-                <DataGridTextColumn Header="Antal Reoler" Binding="{Binding  }" Width="4*"/>
+                <DataGridTextColumn Header="Antal Reoler" Binding="{Binding NumberOfStallsRented }" Width="4*"/>
                
             </DataGrid.Columns>
 
