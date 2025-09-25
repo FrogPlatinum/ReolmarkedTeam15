@@ -34,10 +34,14 @@ namespace ReolmarkedTeam15.Models
             Location = location;
             RenterID = renterID;
         }
+
+        //Jeg tror det her skal i MainViewModel når vi kommer dertil :)
         public void AssignRenter(int renterId)
         {
             RenterID = renterId;
             Availability = AvailabilityStatus.Optaget;
         }
+
+        
     }
 }
