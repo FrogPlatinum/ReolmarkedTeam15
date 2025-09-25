@@ -32,7 +32,17 @@ namespace ReolmarkedTeam15.ViewModels
                 r.NumberOfStallsRented = StallVM.Stalls.Count(o => o.RenterID == r.RenterID);
             }
         }
-
+        // ---- Continue Here
+        public void DisplayStallRenter()
+        {
+            foreach(var o in StallVM.Stalls)
+            {
+                if(o.RenterID != null)
+                {
+                    var renter = RenterVM.Renters.FirstOrDefault(r => r.RenterID == o.RenterID);
+                }
+            }
+        }
 
         ////PropertyChangedHandler - Commented out since it's in BaseViewModel now.
         //public event PropertyChangedEventHandler PropertyChanged;
