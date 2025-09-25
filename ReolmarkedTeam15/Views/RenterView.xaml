@@ -29,11 +29,11 @@
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Lejer ID" Binding="{Binding RenterID }" Width="3*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Fornavn" Binding="{Binding RenterFirstName }" Width="4*"/>
-                <DataGridTextColumn Header="Efternavn" Binding="{Binding RenterLastName }" Width="4*"/>
-                <DataGridTextColumn Header="Telefon" Binding="{Binding RenterPhoneNumber }" Width="5*"/>
-                <DataGridTextColumn Header="Email" Binding="{Binding RenterEmail }" Width="8*"/>
-                <DataGridTextColumn Header="Antal Reoler" Binding="{Binding NumberOfStallsRented }" Width="4*"/>
+                <DataGridTextColumn Header="Fornavn" Binding="{Binding RenterFirstName }" Width="4*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Efternavn" Binding="{Binding RenterLastName }" Width="4*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Telefon" Binding="{Binding RenterPhoneNumber }" Width="5*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding RenterEmail }" Width="8*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Antal Reoler" Binding="{Binding NumberOfStallsRented }" Width="4*" IsReadOnly="True"/>
                
             </DataGrid.Columns>
 

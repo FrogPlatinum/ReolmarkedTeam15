@@ -14,7 +14,7 @@ namespace ReolmarkedTeam15.Models
         public string RenterPhoneNumber { get; set; }
         public string RenterEmail { get; set; }
         public int NumberOfStallsRented { get; set; }
-        public List<int> usedIds = new List<int>();
+        public List<int> usedIds = new List<int>(); //Bruges så vi ikke får duplicates af ID.
         public Random _random = new Random();
 
         //Constructor
@@ -37,7 +37,7 @@ namespace ReolmarkedTeam15.Models
                 id = _random.Next(1000, 9999);
             } while (usedIds.Contains(id));
 
-            usedIds.Add(id);
+            usedIds.Add(id); //Her tilføjer den det genererede id til UsedIds.
             return id;
         }
     }
