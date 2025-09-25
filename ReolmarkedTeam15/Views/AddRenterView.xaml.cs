@@ -23,13 +23,16 @@ namespace ReolmarkedTeam15.Views
     /// </summary>
     public partial class AddRenterView : Window
     {
+        //private IRenterRepo _renterRepo;
+
         public AddRenterView()
         {
            InitializeComponent();
+           //_renterRepo = renterRepo;
 
-            //IRenterRepo repo = new MemoryRenterRepo();
-            //DataContext = new RenterViewModel(repo);
-             
+            
+           //DataContext = new RenterViewModel(_renterRepo);
+
 
         }
 

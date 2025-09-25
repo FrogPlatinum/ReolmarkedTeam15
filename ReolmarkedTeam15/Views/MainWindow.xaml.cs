@@ -53,7 +53,7 @@ namespace ReolmarkedTeam15.Views
             MainFrame.Navigate(new FrontPageView());
         }
 
-        private void ShowRenterView_Click(object sender, RoutedEventArgs e) // Display "RenterView" on click.
+        public void ShowRenterView_Click(object sender, RoutedEventArgs e) // Display "RenterView" on click.
         {
             var RenterView = new RenterView();
 

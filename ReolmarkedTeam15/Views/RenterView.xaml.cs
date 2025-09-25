@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ReolmarkedTeam15.Interfaces;
+using ReolmarkedTeam15.Repos;
 using ReolmarkedTeam15.ViewModels;
 using ReolmarkedTeam15.Views;
 
@@ -23,9 +24,10 @@ namespace ReolmarkedTeam15.Views
     /// </summary>
     public partial class RenterView : Page
     {
-       
+        //private IRenterRepo _renterRepo;
         public RenterView()
         {
+            //_renterRepo = new MemoryRenterRepo();
             InitializeComponent();
 
         
@@ -34,7 +36,7 @@ namespace ReolmarkedTeam15.Views
         private void AddRenter_Click(object sender, RoutedEventArgs e)
         {
             AddRenterView AddRenterWindow = new AddRenterView();
-            AddRenterWindow.DataContext = this.DataContext;
+            //AddRenterWindow.DataContext = new RenterViewModel(_renterRepo);
             AddRenterWindow.Show();
         }
     }

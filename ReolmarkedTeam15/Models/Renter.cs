@@ -14,16 +14,31 @@ namespace ReolmarkedTeam15.Models
         public string RenterPhoneNumber { get; set; }
         public string RenterEmail { get; set; }
         public int NumberOfStallsRented { get; set; }
+        public List<int> usedIds = new List<int>();
+        public Random _random = new Random();
 
         //Constructor
-        public Renter(int renterId, string renterFirstName, string renterLastName, string renterPhoneNumber, string renterEmail, int numberOfStallsRented)
+        public Renter(string renterFirstName, string renterLastName, string renterPhoneNumber, string renterEmail, int numberOfStallsRented)
         {
-            RenterID = renterId;
+            this.RenterID = GenerateUniqueId();
             RenterFirstName = renterFirstName;
             RenterLastName = renterLastName;
             RenterPhoneNumber = renterPhoneNumber;
             RenterEmail = renterEmail;
             NumberOfStallsRented = numberOfStallsRented;
+        }
+
+        // Metode til at generere ID
+        private int GenerateUniqueId()
+        {
+            int id;
+            do
+            {
+                id = _random.Next(1000, 9999);
+            } while (usedIds.Contains(id));
+
+            usedIds.Add(id);
+            return id;
         }
     }
 }
