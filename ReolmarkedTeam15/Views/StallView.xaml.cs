@@ -27,8 +27,18 @@ namespace ReolmarkedTeam15.Views
 
         private void RentOutStall_Click(object sender, RoutedEventArgs e)
         {
-            RentStallView RentStallWindow = new RentStallView();
-            RentStallWindow.Show();
+            if (DataContext is ReolmarkedTeam15.ViewModels.StallViewModel vm) // To access StallViewModel: selectedStall
+            {
+                var selectedStall = vm.SelectedStall; // Selected stall from DataGrid
+                var rentStallWindow = new RentStallView(selectedStall);
+                rentStallWindow.Show();
+            }
+            else
+            {
+                throw new InvalidOperationException("DataContext is not of type StallViewModel");
+            }
+            //RentStallView RentStallWindow = new RentStallView();
+            //RentStallWindow.Show();
         }
     }
 }

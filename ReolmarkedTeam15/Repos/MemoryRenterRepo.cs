@@ -17,7 +17,7 @@ namespace ReolmarkedTeam15.Repos
         //Sample data
         Renter sampleRenter1 = new Renter("Hans", "Hansen", "12345678", "sample@example.com", 1);
         _renterList.Add(sampleRenter1);
-        Renter sampleRenter2 = new Renter("Hans", "Hansen", "12345678", "sample@example.com", 3);
+        Renter sampleRenter2 = new Renter(20, "Jens", "Jensen", "12345678", "sample@example.com", 3);
         _renterList.Add(sampleRenter2);
         }
         //Add
