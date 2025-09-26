@@ -87,31 +87,33 @@ namespace ReolmarkedTeam15.ViewModels
             
         }
 
-        
+
 
 
         // --------------------- Methods!
 
-        //Commented out till I figure out ID.
+
         // Metode til at lave nyt Renter objekt ud fra tekstfelter.
-        //private void RegisterRenter()
-        //{
-        //    var renter = new Renter(
-        //                   renterID: ,
-        //                   RenterFirstName,
-        //                   RenterLastName,
-        //                   RenterPhoneNumber,
-        //                   RenterEmail);
+        private void RegisterRenter()
+        {
+            
+            var renter = new Renter(
 
-        //    _renterRepo.AddRenter(renter);
-        //    Renters.Add(renter);
+                           RenterFirstName,
+                           RenterLastName,
+                           RenterPhoneNumber,
+                           RenterEmail,
+                           numberOfStallsRented:0);
 
-        //    //Messagebox hvis vi vil have det.
-        //    //System.Windows.MessageBox.Show("Ny Lejer oprettet!", MessageBoxButton.OK, MessageBoxImage.Information);
+            _renterRepo.AddRenter(renter);
+            Renters.Add(renter);
 
-        //    ClearFields(); //Bruger denne metode efter oprettelse til at rydde tekstfelter.
+            //Messagebox hvis vi vil have det.
+            //System.Windows.MessageBox.Show("Ny Lejer oprettet!", "", MessageBoxButton.OK, MessageBoxImage.Information);
 
-        //}
+            ClearFields(); //Bruger denne metode efter oprettelse til at rydde tekstfelter.
+
+        }
 
         // Metode til at rydde tekstfelter i View.
         private void ClearFields()
@@ -130,8 +132,8 @@ namespace ReolmarkedTeam15.ViewModels
 
         // --------------------- Commands til UI
 
-        //Commented out till I figure out ID.
-        // public RelayCommand RegisterRenterCommand => new RelayCommand(execute => RegisterRenter()); 
+        
+        public RelayCommand RegisterRenterCommand => new RelayCommand(execute => RegisterRenter()); 
        // RelayCommand Bruger metode "ClearFields()" til at rydde tekstfelter i View.
         public RelayCommand ClearFieldsCommand => new RelayCommand(execute => ClearFields());
 

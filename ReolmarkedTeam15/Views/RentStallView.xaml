@@ -8,7 +8,7 @@
         Title="" Height="250" Width="400">
         
     <!--Bruger farver fra "Combination #249" https://colors.elwyn.co/-->
-    
+
     <Grid Background="#547076">
 
         <!--Her viser vi hvor mange rækker der skal være og hvor store de er-->
@@ -38,14 +38,26 @@
 
         <!--Vælg Lejer TextBlock (Column 0) + ComboBox (Column 1)-->
         <TextBlock Grid.Row="3" Grid.Column="0" Margin="5,0,0,10" Text="Vælg Lejer:" FontSize="16"/>
-        <ComboBox Grid.Row="3" Grid.Column="1" Margin="0,0,50,10" FontSize="16"/>
+        <ComboBox Grid.Row="3" Grid.Column="1" Margin="0,0,50,10" FontSize="16" ItemsSource="{Binding Renters}" SelectedItem="{Binding SelectedRenter, Mode=TwoWay}">
+            <ComboBox.ItemTemplate> <!--Define variables to be included-->
+                <DataTemplate>
+                    <TextBlock>
+                        <Run Text="ID: "/>
+                        <Run Text="{Binding RenterID}"/>
+                        <Run Text=" : "/>
+                        <Run Text="{Binding RenterFirstName}"/>
+                        <Run Text="{Binding RenterLastName}"/>
+                    </TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
 
         <!--Seperator her-->
         <Separator Grid.Row="4" Grid.ColumnSpan="2" Margin="0,0,0,5" Background="#c2ae93" Height="1"/>
 
         <!--Knapper her-->
         <!-- "Udlej Knap: -->
-        <Button Grid.Row="5" Grid.Column="0" Margin="-30,5,0,0" Width="50" Content="Udlej" FontWeight="Bold" FontSize="14"/>
+        <Button Grid.Row="5" Grid.Column="0" Margin="-30,5,0,0" Width="50" Content="Udlej" FontWeight="Bold" FontSize="14" Click="RentOutButton_Click"/>
         
 
     </Grid>

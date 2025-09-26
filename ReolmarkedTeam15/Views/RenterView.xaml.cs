@@ -36,7 +36,7 @@ namespace ReolmarkedTeam15.Views
         private void AddRenter_Click(object sender, RoutedEventArgs e)
         {
             AddRenterView AddRenterWindow = new AddRenterView();
-            //AddRenterWindow.DataContext = new RenterViewModel(_renterRepo);
+            AddRenterWindow.DataContext = this.DataContext;
             AddRenterWindow.Show();
         }
     }
