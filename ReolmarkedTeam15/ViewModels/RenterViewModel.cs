@@ -22,6 +22,7 @@ namespace ReolmarkedTeam15.ViewModels
 
         public ObservableCollection<Renter> Renters { get; }
 
+
         private string _renterFirstName;
         public string RenterFirstName
         {

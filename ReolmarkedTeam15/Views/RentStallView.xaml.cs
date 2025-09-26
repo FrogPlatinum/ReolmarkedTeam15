@@ -22,28 +22,28 @@ namespace ReolmarkedTeam15.Views
     /// </summary>
     public partial class RentStallView : Window
     {
-        public ObservableCollection<Renter> Renters { get; set; }
-        public Renter SelectedRenter { get; set; }
-        private Stall _stallToRent;
+       // public ObservableCollection<Renter> Renters { get; set; }
+        //public Renter SelectedRenter { get; set; }
+        //private Stall _stallToRent;
 
         public RentStallView(Stall stallToRent)
         {
             InitializeComponent();
 
-            var renterRepo = new MemoryRenterRepo(); // New instance of renter repository -> Shared repo??
-            Renters = new ObservableCollection<Renter>(renterRepo.GetAll());
+            //var renterRepo = new MemoryRenterRepo(); // New instance of renter repository -> Shared repo??
+            //Renters = new ObservableCollection<Renter>(renterRepo.GetAll());
 
-            _stallToRent = stallToRent;
+            //_stallToRent = stallToRent;
             DataContext = this;
         }
         // Assign renter to stall and change availability status
         private void RentOutButton_Click(object sender, RoutedEventArgs e)
         {
-            _stallToRent.RenterID = SelectedRenter.RenterID;
-            _stallToRent.Availability = Stall.AvailabilityStatus.Optaget;
+            //_stallToRent.RenterID = SelectedRenter.RenterID;
+            //_stallToRent.Availability = Stall.AvailabilityStatus.Optaget;
 
-            MessageBox.Show($"Reol {_stallToRent.StallID} udlejet til {SelectedRenter.RenterFirstName} {SelectedRenter.RenterLastName}!");
-            this.Close();
+            //MessageBox.Show($"Reol {_stallToRent.StallID} udlejet til {SelectedRenter.RenterFirstName} {SelectedRenter.RenterLastName}!");
+            //this.Close();
         }
     }
 }

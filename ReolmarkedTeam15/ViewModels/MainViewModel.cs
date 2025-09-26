@@ -6,9 +6,10 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using ReolmarkedTeam15.Helpers;
 using ReolmarkedTeam15.Interfaces;
 using ReolmarkedTeam15.Models;
-using ReolmarkedTeam15.Helpers;
 
 namespace ReolmarkedTeam15.ViewModels
 {
@@ -59,6 +60,10 @@ namespace ReolmarkedTeam15.ViewModels
                 //}
             }
         }
+
+        //Metode til at assigne en renter til en stall.
+      
+
 
         ////PropertyChangedHandler - Commented out since it's in BaseViewModel now.
         //public event PropertyChangedEventHandler PropertyChanged;

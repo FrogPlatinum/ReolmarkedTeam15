@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ReolmarkedTeam15.Views"
+        
         mc:Ignorable="d"
         Title="" Height="250" Width="400">
         
@@ -38,7 +39,7 @@
 
         <!--Vælg Lejer TextBlock (Column 0) + ComboBox (Column 1)-->
         <TextBlock Grid.Row="3" Grid.Column="0" Margin="5,0,0,10" Text="Vælg Lejer:" FontSize="16"/>
-        <ComboBox Grid.Row="3" Grid.Column="1" Margin="0,0,50,10" FontSize="16" ItemsSource="{Binding Renters}" SelectedItem="{Binding SelectedRenter, Mode=TwoWay}">
+        <ComboBox Grid.Row="3" Grid.Column="1" Margin="0,0,50,10" FontSize="16" ItemsSource="{Binding RenterID}" SelectedItem="{Binding SelectedRenter, Mode=TwoWay}">
             <ComboBox.ItemTemplate> <!--Define variables to be included-->
                 <DataTemplate>
                     <TextBlock>

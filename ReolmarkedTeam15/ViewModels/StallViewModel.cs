@@ -75,6 +75,7 @@ namespace ReolmarkedTeam15.ViewModels
                 OnPropertyChanged();
             }
         }
+        
 
         private AvailabilityStatus _availability;
         public AvailabilityStatus Availability
@@ -127,6 +128,17 @@ namespace ReolmarkedTeam15.ViewModels
             Stalls = new ObservableCollection<Stall>(_stallRepo.GetAll());
         }
 
+        //Metoder:
+
+        public void RentOutStall(int renterId)
+        {
+            SelectedStall.RenterID = renterId;   // assuming Stall has a RenterId property
+            SelectedStall.Availability = Stall.AvailabilityStatus.Optaget;
+
+            // Update View
+            OnPropertyChanged(nameof(SelectedStall));
+            OnPropertyChanged(nameof(Stalls));
+        }
         ////PropertyChangedHandler - Commented out since it's in BaseViewModel now.
         //public event PropertyChangedEventHandler PropertyChanged;
         //protected void OnPropertyChanged

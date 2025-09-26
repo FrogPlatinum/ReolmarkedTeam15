@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ReolmarkedTeam15.ViewModels;
+
 
 namespace ReolmarkedTeam15.Views
 {
@@ -23,22 +25,25 @@ namespace ReolmarkedTeam15.Views
         public StallView()
         {
             InitializeComponent();
+            
         }
 
         private void RentOutStall_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is ReolmarkedTeam15.ViewModels.StallViewModel vm) // To access StallViewModel: selectedStall
-            {
-                var selectedStall = vm.SelectedStall; // Selected stall from DataGrid
-                var rentStallWindow = new RentStallView(selectedStall);
-                rentStallWindow.Show();
-            }
-            else
-            {
-                throw new InvalidOperationException("DataContext is not of type StallViewModel");
-            }
+            var mainVm = this.DataContext as MainViewModel;
+            var selectedStall = mainVm.StallVM.SelectedStall;
+            var rentStallWindow = new RentStallView(selectedStall);
+            rentStallWindow.DataContext = this.DataContext;
+            rentStallWindow.Show();
+
+            
+            //
             //RentStallView RentStallWindow = new RentStallView();
             //RentStallWindow.Show();
+
+            //AddRenterView AddRenterWindow = new AddRenterView();
+            //AddRenterWindow.DataContext = this.DataContext;
+            //AddRenterWindow.Show();
         }
     }
 }
