@@ -27,6 +27,16 @@ namespace ReolmarkedTeam15.Models
             RenterEmail = renterEmail;
             NumberOfStallsRented = numberOfStallsRented;
         }
+        //Overloaded for Memory Samples
+        public Renter(int renterID, string renterFirstName, string renterLastName, string renterPhoneNumber, string renterEmail, int numberOfStallsRented)
+        {
+            RenterID = renterID;
+            RenterFirstName = renterFirstName;
+            RenterLastName = renterLastName;
+            RenterPhoneNumber = renterPhoneNumber;
+            RenterEmail = renterEmail;
+            NumberOfStallsRented = numberOfStallsRented;
+        }
 
         // Metode til at generere ID
         private int GenerateUniqueId()

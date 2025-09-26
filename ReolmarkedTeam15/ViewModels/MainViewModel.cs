@@ -24,7 +24,9 @@ namespace ReolmarkedTeam15.ViewModels
             RenterVM = new RenterViewModel(renterRepo);
 
             UpdateRenterStallCount();
+            DisplayStallRenter();
         }
+        //Counting renters number of stalls
         public void UpdateRenterStallCount()
         {
             foreach (var r in RenterVM.Renters)
@@ -32,15 +34,29 @@ namespace ReolmarkedTeam15.ViewModels
                 r.NumberOfStallsRented = StallVM.Stalls.Count(o => o.RenterID == r.RenterID);
             }
         }
-        // ---- Continue Here
+        //Checking stalls and renters for matching renter id and displaying owner first and last name
         public void DisplayStallRenter()
         {
             foreach(var o in StallVM.Stalls)
             {
-                if(o.RenterID != null)
+                //Skal sørge for at IDs er >0 da NULL ikke virker
+                if (o.RenterID != 0)
                 {
                     var renter = RenterVM.Renters.FirstOrDefault(r => r.RenterID == o.RenterID);
+                    if (renter != null)
+                    {
+                        o.StallRenter = $"{renter.RenterFirstName} {renter.RenterLastName}";
+                    }
+                    else
+                    {
+                        o.StallRenter = "Ukendt";
+                    }
                 }
+                //Optional : Can replace "Udlejnings status" with this 
+                //else
+                //{
+                //    o.StallRenter = "Ledig";
+                //}
             }
         }
 
