@@ -24,6 +24,7 @@ namespace ReolmarkedTeam15.Models
         }
         public StallTypes StallType { get; set; }
         public int Location {  get; set; }
+        public string StallRenter { get; set; }  
 
         //Constructor
         public Stall(int stallId, int renterID, AvailabilityStatus availability, StallTypes stallType, int location)

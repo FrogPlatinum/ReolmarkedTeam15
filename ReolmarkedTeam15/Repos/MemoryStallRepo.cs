@@ -22,7 +22,7 @@ namespace ReolmarkedTeam15.Repos
             Stall sampleStall2 = new Stall(02, 00, Stall.AvailabilityStatus.Ledig, Stall.StallTypes.B, 2);
             _stallList.Add(sampleStall2);
 
-            Stall sampleStall3 = new Stall(03, 10, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.A, 3);
+            Stall sampleStall3 = new Stall(03, 1111, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.A, 3);
 
             Stall sampleStall4 = new Stall(04, 00, Stall.AvailabilityStatus.Ledig, Stall.StallTypes.B, 4);
             _stallList.Add(sampleStall4);
@@ -30,7 +30,7 @@ namespace ReolmarkedTeam15.Repos
             Stall sampleStall5 = new Stall(05, 00, Stall.AvailabilityStatus.Ledig, Stall.StallTypes.A, 5);
             _stallList.Add(sampleStall5);
 
-            Stall sampleStall6 = new Stall(06, 00, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 6);
+            Stall sampleStall6 = new Stall(06, 1111, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 6);
             _stallList.Add(sampleStall6);
 
             Stall sampleStall7 = new Stall(07, 00, Stall.AvailabilityStatus.Ledig, Stall.StallTypes.A, 7);
@@ -72,10 +72,10 @@ namespace ReolmarkedTeam15.Repos
             Stall sampleStall19 = new Stall(019, 00, Stall.AvailabilityStatus.Ledig, Stall.StallTypes.A, 19);
             _stallList.Add(sampleStall19);
 
-            Stall sampleStall20 = new Stall(020, 10, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 20);
+            Stall sampleStall20 = new Stall(020, 2222, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 20);
             _stallList.Add(sampleStall20);
 
-            Stall sampleStall21 = new Stall(021, 10, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 21);
+            Stall sampleStall21 = new Stall(021, 2222, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 21);
             _stallList.Add(sampleStall21);
 
             Stall sampleStall22 = new Stall(022, 10, Stall.AvailabilityStatus.Optaget, Stall.StallTypes.B, 22);

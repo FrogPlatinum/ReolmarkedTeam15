@@ -33,7 +33,7 @@
                 <DataGridTextColumn Header="Placering" Binding="{Binding Location }" Width="4*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Indretning" Binding="{Binding StallType }" Width="4*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Udlejningsstatus" Binding="{Binding Availability}" Width="6*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Lejes Af" Binding="{Binding StallRenterID }" Width="3*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Lejes Af" Binding="{Binding StallRenter }" Width="3*" IsReadOnly="True"/>
                 
             </DataGrid.Columns>
 
