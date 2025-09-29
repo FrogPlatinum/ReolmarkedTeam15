@@ -25,6 +25,11 @@ namespace ReolmarkedTeam15.Views
         public ObservableCollection<Renter> Renters { get; set; }
         public Renter SelectedRenter { get; set; }
         private Stall _stallToRent;
+        public Stall StallToRent
+        {
+            get { return _stallToRent; }
+            set { _stallToRent = value; }
+        }
 
         public RentStallView(Stall stallToRent)
         {

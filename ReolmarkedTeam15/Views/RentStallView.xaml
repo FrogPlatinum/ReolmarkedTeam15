@@ -34,7 +34,11 @@
 
         <!--Reol Valgt (visning) TextBlock (Column 0) + TextBlock (Column 1)-->
         <TextBlock Grid.Row="2" Grid.Column="0" Margin="5,0,0,10" Text="Reol Valgt:" FontSize="16"/>
-        <TextBlock Grid.Row="2" Grid.Column="1" Margin="0,0,50,10" Text="Binding" FontSize="16" FontWeight="DemiBold"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Margin="0,0,50,10" FontSize="16" FontWeight="DemiBold">
+            <TextBlock.Text>
+                <Binding Path="StallToRent.StallID"/>
+            </TextBlock.Text>
+        </TextBlock>
 
         <!--Vælg Lejer TextBlock (Column 0) + ComboBox (Column 1)-->
         <TextBlock Grid.Row="3" Grid.Column="0" Margin="5,0,0,10" Text="Vælg Lejer:" FontSize="16"/>
