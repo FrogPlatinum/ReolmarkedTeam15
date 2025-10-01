@@ -30,7 +30,7 @@ namespace ReolmarkedTeam15.Views
             if (DataContext is ReolmarkedTeam15.ViewModels.StallViewModel vm) // To access StallViewModel: selectedStall
             {
                 var selectedStall = vm.SelectedStall; // Selected stall from DataGrid
-                var rentStallWindow = new RentStallView(selectedStall);
+                var rentStallWindow = new RentStallView(selectedStall, vm); // Pass selected stall and StallViewModel to RentStallView
                 rentStallWindow.Show();
             }
             else
