@@ -17,23 +17,61 @@ namespace ReolmarkedTeam15.Repos
         public MemoryOrderRepo()
         {
             //Sample data
-            var order1 = new Order(1, new DateTime(2025, 10, 1, 12, 30, 0), 99.99); // 2025/October/1, 2025, 12:30 PM
-            order1.PurchasedProducts.Add(new Product(3333, "Product A", 20, 49.99, Product.Status.Hjemme));
-            order1.PurchasedProducts.Add(new Product(444, "Product B", 20, 50.00, Product.Status.Hjemme));
+            var order1 = new Order(1, new DateTime(2025, 10, 1, 12, 30, 0), 100); // 2025/October/1, 2025, 12:30 PM
+            order1.PurchasedProducts.Add(new Product(3333, "Product A", "sample comment", 50, Product.PurchaseSituation.Hjemme));
+            order1.PurchasedProducts.Add(new Product(4444, "Product B", "sample comment", 100, Product.PurchaseSituation.Købt));
+
         }
+        //Add
+        public void AddOrder(Order order)
+        {
+            if (order != null)
+            {
+                _orderList.Add(order);
+            }
+            else
+            {
+                throw new ArgumentNullException(nameof(order), "Null order not allowed.");
+            }
+        }
+        //Delete
+        public void DeleteOrder(Order order)
+        {
+            if (order != null)
+            {
+                _orderList.Remove(order);
+            }
+            else
+            {
+                throw new ArgumentNullException(nameof(order), "Null order not allowed.");
+            }
+        }
+        //Get All
         public IEnumerable<Order> GetAllOrders()
         {
             return _orderList;
         }
-
-        public Order GetOrderById(int orderId)
+        //Get By ID
+        public Order GetById(int id)
         {
-            return _orderList.Find(order => order.OrderID == orderId);
+            var order = _orderList.FirstOrDefault(o => o.OrderID == id);
+            if (order == null)
+            {
+                throw new ArgumentException($"No order found with ID {id})");
+            }
+            return order;
         }
-
-        public void AddOrder(Order order)
+        //Update
+        public void Update(Order order)
         {
-            _orderList.Add(order);
+            var currentOrder = _orderList.FirstOrDefault(o => o.OrderID == order.OrderID);
+            if (currentOrder == null)
+            {
+                throw new ArgumentException($"No order found with ID {order.OrderID})");
+            }
+            currentOrder.OrderDate = order.OrderDate;
+            currentOrder.TotalPrice = order.TotalPrice;
+            currentOrder.PurchasedProducts = order.PurchasedProducts;
         }
     }
 }
