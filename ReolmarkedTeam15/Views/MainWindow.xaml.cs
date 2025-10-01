@@ -62,5 +62,25 @@ namespace ReolmarkedTeam15.Views
 
             MainFrame.Navigate(RenterView);
         }
+
+        private void ShowOrderView_Click(object sender, RoutedEventArgs e)
+        {
+            var OrderView = new OrderView();
+
+            //Order view context set to OrderViewModel
+            //OrderView.DataContext = new OrderViewModel(_orderRepo); Commented out until they're made.
+
+            MainFrame.Navigate(OrderView);
+        }
+
+        private void ShowProductView_Click(object sender, RoutedEventArgs e)
+        {
+            var ProductView = new ProductView();
+
+            //Renter view context set to RenterViewModel
+           // ProductView.DataContext = new ProductViewModel(_productRepo); Commented out until they're made.
+
+            MainFrame.Navigate(ProductView);
+        }
     } 
 }

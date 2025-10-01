@@ -1,0 +1,58 @@
+﻿<Page x:Class="ReolmarkedTeam15.Views.OrderView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ReolmarkedTeam15.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="900"
+
+      FontFamily="Segoe UI"
+      FontSize="14"
+      
+      Title="OrderView">
+
+    <!--Bruger farver fra "Combination #249" https://colors.elwyn.co/-->
+    <Grid Background="#547076">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="650"/>
+            <ColumnDefinition Width="255"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="800"/>
+        </Grid.RowDefinitions>
+
+        <!-- Liste overskrift-->
+        <Label Grid.Column="0" Grid.Row="0" Content="Liste over produkter i køb samt Totalpris" Foreground="White"/>
+
+        <!-- Liste i Datagrid-->
+        <DataGrid Grid.Column="0" Grid.Row="1" Background="#547076" ItemsSource="{Binding Products}" Margin="0,0,0,0" AutoGenerateColumns="False" BorderBrush="Transparent">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Produkt ID" Binding="{Binding ProductID }" Width="3*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Navn" Binding="{Binding ProductName }" Width="6*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Pris (DKK)" Binding="{Binding Price }" Width="5*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Totalpris (DKK)" Binding="{Binding PurchaseStatus }" Width="4*" IsReadOnly="True"/>
+
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+        <!-- Produkt ID overskrift-->
+        <Label Grid.Column="1" Grid.Row="0" Content="Tilføj Produkter via ID" Margin="10,0,0,0" Foreground="White"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" Margin="20,0,20,0" >
+        <!--Produkt ID TekstBoks-->
+        <TextBox Grid.Column="1" Grid.Row="1" Height="28"/>
+        <!-- Knapper til køb af Produkter.-->
+            <Button Grid.Column="1" Grid.Row="1" Margin="0,5,0,0" Content="Tilføj Produkt" Height="28" HorizontalAlignment="Left" FontWeight="SemiBold" Width="100"/>
+            <Button Grid.Column="1" Grid.Row="1" Margin="0,5,0,0" Content="Fjern Produkt" Height="28" HorizontalAlignment="Left" FontWeight="SemiBold" Width="100" Foreground="White" Background="#793327"/>
+            <Button Grid.Column="1" Grid.Row="1" Margin="0,-94,0,0" Content="Færdiggør Køb" Height="28" HorizontalAlignment="Right" FontWeight="Bold" Width="110" Background="#d6b43e" />
+            <Button Grid.Column="1" Grid.Row="1" Margin="104,-28,0,0" Content="Købshistorik" Height="28" FontWeight="SemiBold" Width="110" />
+        </StackPanel>
+
+    </Grid>
+</Page>
