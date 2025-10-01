@@ -1,5 +1,6 @@
 ﻿using ReolmarkedTeam15.Models;
 using ReolmarkedTeam15.Repos;
+using ReolmarkedTeam15.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -30,8 +31,8 @@ namespace ReolmarkedTeam15.Views
             get { return _stallToRent; }
             set { _stallToRent = value; }
         }
-
-        public RentStallView(Stall stallToRent)
+        private StallViewModel _stallViewModel;
+        public RentStallView(Stall stallToRent, StallViewModel stallViewModel)
         {
             InitializeComponent();
 
@@ -39,6 +40,7 @@ namespace ReolmarkedTeam15.Views
             Renters = new ObservableCollection<Renter>(renterRepo.GetAll());
 
             _stallToRent = stallToRent;
+            _stallViewModel = stallViewModel;
             DataContext = this;
         }
         // Assign renter to stall and change availability status
@@ -46,8 +48,9 @@ namespace ReolmarkedTeam15.Views
         {
             _stallToRent.RenterID = SelectedRenter.RenterID;
             _stallToRent.Availability = Stall.AvailabilityStatus.Optaget;
+            _stallViewModel.RefreshView(); // Force refresh StallView to show updated status
 
-            MessageBox.Show($"Reol {_stallToRent.StallID} udlejet til {SelectedRenter.RenterFirstName} {SelectedRenter.RenterLastName}!");
+            //MessageBox.Show($"Reol {_stallToRent.StallID} udlejet til {SelectedRenter.RenterFirstName} {SelectedRenter.RenterLastName}!");
             this.Close();
         }
     }

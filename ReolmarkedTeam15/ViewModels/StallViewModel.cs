@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ReolmarkedTeam15.Helpers;
+using ReolmarkedTeam15.Interfaces;
+using ReolmarkedTeam15.Models;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -6,9 +9,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using ReolmarkedTeam15.Interfaces;
-using ReolmarkedTeam15.Models;
-using ReolmarkedTeam15.Helpers;
+using System.Windows.Data;
 using static ReolmarkedTeam15.Models.Stall;
 
 namespace ReolmarkedTeam15.ViewModels
@@ -119,7 +120,10 @@ namespace ReolmarkedTeam15.ViewModels
                 OnPropertyChanged();
             }
         }
-
+        public void RefreshView()
+        {
+            CollectionViewSource.GetDefaultView(Stalls)?.Refresh(); // Force View to refresh (StallView)
+        }
         //Constructor
         public StallViewModel(IStallRepo stallRepo)
         {
