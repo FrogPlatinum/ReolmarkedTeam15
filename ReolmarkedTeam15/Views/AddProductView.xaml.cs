@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ReolmarkedTeam15.Views
 {
     /// <summary>
-    /// Interaction logic for ProductView.xaml
+    /// Interaction logic for AddProductView.xaml
     /// </summary>
-    public partial class ProductView : Page
+    public partial class AddProductView : Window
     {
-        public ProductView()
+        public AddProductView()
         {
             InitializeComponent();
-        }
-        private void AddProduct_Click(object sender, RoutedEventArgs e)
-        {
-            AddProductView AddProductWindow = new AddProductView();
-            AddProductWindow.DataContext = this.DataContext;
-            AddProductWindow.Show();
         }
     }
 }

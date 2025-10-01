@@ -17,7 +17,7 @@
     <Grid Background="#547076">
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="650"/>
+            <ColumnDefinition Width="830"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -26,28 +26,29 @@
         </Grid.RowDefinitions>
 
         <!-- Liste overskrift-->
-        <Label Grid.Column="0" Grid.Row="0" Content="Liste over produkter og deres informationer" Foreground="White"/>
+        <Label Grid.Column="0" Grid.Row="0" Content="Liste over varer og deres informationer" Foreground="White" Margin="5,0,0,0"/>
 
         <!-- Liste i Datagrid-->
-        <DataGrid Grid.Column="0" Grid.Row="1" Background="#547076" ItemsSource="{Binding Products}" Margin="0,0,0,0" AutoGenerateColumns="False" BorderBrush="Transparent">
+        <DataGrid Grid.Column="0" Grid.Row="1" Background="#547076" ItemsSource="{Binding Products}" Margin="5,0,0,0" AutoGenerateColumns="False" BorderBrush="Transparent">
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Produkt ID" Binding="{Binding ProductID }" Width="3*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Reol" Binding="{Binding ProductStallID }" Width="1.5*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Vare ID" Binding="{Binding ProductID }" Width="2*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Navn" Binding="{Binding ProductName }" Width="6*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Reol" Binding="{Binding ProductStallID }" Width="4*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Pris (DKK)" Binding="{Binding Price }" Width="5*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Købsstatus" Binding="{Binding PurchaseStatus }" Width="4*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Beskrivelse" Binding="{Binding ProductDescription }" Width="14*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Pris (DKK)" Binding="{Binding Price }" Width="3*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Købsstatus" Binding="{Binding PurchaseStatus }" Width="3*" IsReadOnly="True"/>
                 
 
             </DataGrid.Columns>
 
         </DataGrid>
 
-        <!-- Rediger Produkter overskrift-->
-        <Label Grid.Column="1" Grid.Row="0" Content="Rediger Produkter" Margin="10,0,0,0" Foreground="White"/>
+        <!-- Rediger Varer overskrift-->
+        <Label Grid.Column="1" Grid.Row="0" Content="Rediger Varer" Margin="5,0,0,0" Foreground="White"/>
 
-        <!-- Knapper til redigering af Produkter.-->
-        <Button Grid.Column="1" Grid.Row="1" Margin="10,0,0,0" Content="Tilføj Produkt" Height="26" VerticalAlignment="Top" FontWeight="SemiBold"/>
+        <!-- Knapper til redigering af Varer.-->
+        <Button Grid.Column="1" Grid.Row="1" Margin="10,0,0,0" Content="Tilføj Vare" Height="26" VerticalAlignment="Top" FontWeight="SemiBold" Click="AddProduct_Click"/>
 
 
     </Grid>

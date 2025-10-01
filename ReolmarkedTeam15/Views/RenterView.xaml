@@ -13,7 +13,7 @@
     <Grid Background="#547076">
         
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="700"/>
+            <ColumnDefinition Width="830"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -25,14 +25,14 @@
         <Label Grid.Column="0" Grid.Row="0" Content="Liste over lejere og deres informationer" Foreground="White"/>
         
         <!-- Liste i Datagrid-->
-        <DataGrid Grid.Column="0" Grid.Row="1" Background="#547076" ItemsSource="{Binding Renters}" Margin="0,0,0,0" AutoGenerateColumns="False" BorderBrush="Transparent">
+        <DataGrid Grid.Column="0" Grid.Row="1" Background="#547076" ItemsSource="{Binding Renters}" Margin="5,0,0,0" AutoGenerateColumns="False" BorderBrush="Transparent">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Lejer ID" Binding="{Binding RenterID }" Width="3*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Fornavn" Binding="{Binding RenterFirstName }" Width="4*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Efternavn" Binding="{Binding RenterLastName }" Width="4*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Fornavn" Binding="{Binding RenterFirstName }" Width="5*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Efternavn" Binding="{Binding RenterLastName }" Width="7*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Telefon" Binding="{Binding RenterPhoneNumber }" Width="5*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Email" Binding="{Binding RenterEmail }" Width="8*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding RenterEmail }" Width="12*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Antal Reoler" Binding="{Binding NumberOfStallsRented }" Width="4*" IsReadOnly="True"/>
                
             </DataGrid.Columns>

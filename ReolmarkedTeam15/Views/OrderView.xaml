@@ -16,7 +16,7 @@
     <Grid Background="#547076">
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="650"/>
+            <ColumnDefinition Width="730"/>
             <ColumnDefinition Width="255"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -25,31 +25,30 @@
         </Grid.RowDefinitions>
 
         <!-- Liste overskrift-->
-        <Label Grid.Column="0" Grid.Row="0" Content="Liste over produkter i køb samt Totalpris" Foreground="White"/>
+        <Label Grid.Column="0" Grid.Row="0" Content="Liste over varer i køb samt totalpris" Foreground="White" Margin="5,0,0,0"/>
 
         <!-- Liste i Datagrid-->
-        <DataGrid Grid.Column="0" Grid.Row="1" Background="#547076" ItemsSource="{Binding Products}" Margin="0,0,0,0" AutoGenerateColumns="False" BorderBrush="Transparent">
+        <DataGrid Grid.Column="0" Grid.Row="1" Background="#547076" ItemsSource="{Binding Products}" Margin="5,0,0,0" AutoGenerateColumns="False" BorderBrush="Transparent">
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Produkt ID" Binding="{Binding ProductID }" Width="3*" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Vare ID" Binding="{Binding ProductID }" Width="3*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Navn" Binding="{Binding ProductName }" Width="6*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Pris (DKK)" Binding="{Binding Price }" Width="5*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Totalpris (DKK)" Binding="{Binding PurchaseStatus }" Width="4*" IsReadOnly="True"/>
-
 
             </DataGrid.Columns>
 
         </DataGrid>
 
-        <!-- Produkt ID overskrift-->
-        <Label Grid.Column="1" Grid.Row="0" Content="Tilføj Produkter via ID" Margin="10,0,0,0" Foreground="White"/>
+        <!-- Tilføj Vare overskrift-->
+        <Label Grid.Column="1" Grid.Row="0" Content="Tilføj Vare via ID" Margin="17,0,0,0" Foreground="White"/>
 
         <StackPanel Grid.Column="1" Grid.Row="1" Margin="20,0,20,0" >
         <!--Produkt ID TekstBoks-->
         <TextBox Grid.Column="1" Grid.Row="1" Height="28"/>
-        <!-- Knapper til køb af Produkter.-->
-            <Button Grid.Column="1" Grid.Row="1" Margin="0,5,0,0" Content="Tilføj Produkt" Height="28" HorizontalAlignment="Left" FontWeight="SemiBold" Width="100"/>
-            <Button Grid.Column="1" Grid.Row="1" Margin="0,5,0,0" Content="Fjern Produkt" Height="28" HorizontalAlignment="Left" FontWeight="SemiBold" Width="100" Foreground="White" Background="#793327"/>
+        <!-- Knapper til håndtering af Varer og Køb -->
+            <Button Grid.Column="1" Grid.Row="1" Margin="0,5,0,0" Content="Tilføj Vare" Height="28" HorizontalAlignment="Left" FontWeight="SemiBold" Width="100"/>
+            <Button Grid.Column="1" Grid.Row="1" Margin="0,5,0,0" Content="Fjern Vare" Height="28" HorizontalAlignment="Left" FontWeight="SemiBold" Width="100" Foreground="White" Background="#793327"/>
             <Button Grid.Column="1" Grid.Row="1" Margin="0,-94,0,0" Content="Færdiggør Køb" Height="28" HorizontalAlignment="Right" FontWeight="Bold" Width="110" Background="#d6b43e" />
             <Button Grid.Column="1" Grid.Row="1" Margin="104,-28,0,0" Content="Købshistorik" Height="28" FontWeight="SemiBold" Width="110" />
         </StackPanel>

@@ -27,7 +27,7 @@
 
             <Button Name="Button2" Content="Lejere" Height="25" Width="100" Margin="0,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ShowRenterView_Click"  FontWeight="Bold" FontSize="15"/>
             
-            <Button Name="Button3" Content="Produkter" Height="25" Width="100" Margin="0,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ShowProductView_Click"  FontWeight="Bold" FontSize="15"/>
+            <Button Name="Button3" Content="Varer" Height="25" Width="100" Margin="0,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ShowProductView_Click"  FontWeight="Bold" FontSize="15"/>
             
             <Button Name="Button4" Content="Køb" Height="25" Width="100" Margin="0,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ShowOrderView_Click"  FontWeight="Bold" FontSize="15"/>
         </StackPanel>
