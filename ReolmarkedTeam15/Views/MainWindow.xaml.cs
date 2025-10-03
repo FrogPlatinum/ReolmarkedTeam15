@@ -22,6 +22,7 @@ namespace ReolmarkedTeam15.Views
         //Field to keep repo instant the same across pages
         private IStallRepo _stallRepo;
         private IRenterRepo _renterRepo;
+        private IProductRepo _productRepo;
 
         public MainWindow()
         {
@@ -30,9 +31,10 @@ namespace ReolmarkedTeam15.Views
             //Repo creation, currently set to MemoryRepos
             _stallRepo = new MemoryStallRepo();
             _renterRepo = new MemoryRenterRepo();
+            _productRepo = new MemoryProductRepo();
 
             //Passing repo to MainViewModel
-            DataContext = new MainViewModel(_stallRepo, _renterRepo);
+            DataContext = new MainViewModel(_stallRepo, _renterRepo, _productRepo);
 
             MainFrame.Navigate(new FrontPageView()); //makes the program display FrontPageView on startup :)
         }
@@ -77,8 +79,8 @@ namespace ReolmarkedTeam15.Views
         {
             var ProductView = new ProductView();
 
-            //Renter view context set to RenterViewModel
-           // ProductView.DataContext = new ProductViewModel(_productRepo); Commented out until they're made.
+            //Product view context set to ProductViewModel
+            ProductView.DataContext = new ProductViewModel(_productRepo, _stallRepo);
 
             MainFrame.Navigate(ProductView);
         }

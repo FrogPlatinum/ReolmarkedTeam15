@@ -14,9 +14,9 @@ namespace ReolmarkedTeam15.Repos
 
         public MemoryProductRepo()
         {
-            _productList.Add(new Product(1001, "Keramikkop", "Blå med stjerner", 130, Product.PurchaseSituation.Købt));
-            _productList.Add(new Product(1002, "Træfigur", "Bøgetræ", 120, Product.PurchaseSituation.Købt));
-            _productList.Add(new Product(1001, "Halstørklæde", "Sort, håndlavet", 150, Product.PurchaseSituation.Hjemme));
+            _productList.Add(new Product(1, 1001, "Keramikkop", "Blå med stjerner", 130, Product.PurchaseSituation.Købt));
+            _productList.Add(new Product(2, 1002, "Træfigur", "Bøgetræ", 120, Product.PurchaseSituation.Købt));
+            _productList.Add(new Product(3, 1001, "Halstørklæde", "Sort, håndlavet", 150, Product.PurchaseSituation.Hjemme));
         }
 
         //Add
@@ -57,8 +57,8 @@ namespace ReolmarkedTeam15.Repos
                 throw new ArgumentException($"No Product Found With ID {product.ProductID})");
             }
 
-            currentProduct.Name = product.Name;
-            currentProduct.Description = product.Description;
+            currentProduct.ProductName = product.ProductName;
+            currentProduct.ProductName = product.ProductName;
             currentProduct.Price = product.Price;
             currentProduct.PurchaseStatus = product.PurchaseStatus;
         }

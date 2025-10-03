@@ -17,11 +17,14 @@ namespace ReolmarkedTeam15.ViewModels
         //Instances of sub viewmodels
         public StallViewModel StallVM { get; }
         public RenterViewModel RenterVM { get; }
+        public ProductViewModel ProductVM { get; }
 
-        public MainViewModel(IStallRepo stallRepo, IRenterRepo renterRepo)
+        public MainViewModel(IStallRepo stallRepo, IRenterRepo renterRepo, IProductRepo productRepo)
         {
             StallVM = new StallViewModel(stallRepo);
             RenterVM = new RenterViewModel(renterRepo);
+            ProductVM = new ProductViewModel(productRepo, stallRepo);
+
 
             UpdateRenterStallCount();
             DisplayStallRenter();

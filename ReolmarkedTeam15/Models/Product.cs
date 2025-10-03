@@ -13,9 +13,10 @@ namespace ReolmarkedTeam15.Models
         public Random _random = new Random();
 
         //Properties
+        public int ProductStallID { get; set; }
         public int ProductID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public string ProductName { get; set; }
+        public string ProductDescription { get; set; }
         public int Price { get; set; }
         public enum PurchaseSituation
         {
@@ -25,21 +26,23 @@ namespace ReolmarkedTeam15.Models
         public PurchaseSituation PurchaseStatus { get; set; }
 
         //Constructor
-        public Product(string name, string description, int price, PurchaseSituation purchaseStatus)
+        public Product(int productStallID, string productName, string productDescription, int price, PurchaseSituation purchaseStatus)
         {
-            ProductID = GenerateUniqueId();
-            Name = name;
-            Description = description;
+            ProductStallID = productStallID;
+            ProductName = productName;
+            ProductDescription = productDescription;
             Price = price;
             PurchaseStatus = purchaseStatus;
+            ProductID = GenerateUniqueId();
         }
 
         //Overloaded for sample
-        public Product(int productId, string name, string description, int price, PurchaseSituation purchaseStatus)
+        public Product(int productStallID, int productId, string productName, string productDescription, int price, PurchaseSituation purchaseStatus)
         {
+            ProductStallID= productStallID;
             ProductID = productId;
-            Name = name;
-            Description = description;
+            ProductName = productName;
+            ProductDescription = productDescription;
             Price = price;
             PurchaseStatus = purchaseStatus;
         }

@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ReolmarkedTeam15.Views"
-       
+        xmlns:viewmodels="clr-namespace:ReolmarkedTeam15.ViewModels" 
+        d:DataContext="{d:DesignInstance Type=viewmodels:ProductViewModel}"
         mc:Ignorable="d"
         Title="" Height="280" Width="400">
 
@@ -50,7 +51,7 @@
 
         <!--Reol TextBlock (Column 0) + ComboBox (Column 1) (forbundet med ID men viser Placering?)-->
         <TextBlock Grid.Row="5" Grid.Column="0" Margin="5,0,0,10" Text="Reol:" FontSize="16"/>
-        <ComboBox Grid.Row="5" Grid.Column="1" Margin="0,0,50,10" FontSize="16" Text="{Binding ProductStallID, UpdateSourceTrigger=PropertyChanged}"/>
+        <ComboBox Grid.Row="5" Grid.Column="1" Margin="0,0,50,10" FontSize="16" ItemsSource="{Binding Stalls}" SelectedItem="{Binding SelectedStall}" DisplayMemberPath="Location"/>
 
         <!--Seperator her-->
         <Separator Grid.Row="6" Grid.ColumnSpan="2" Margin="0,0,0,5" Background="#CCCCCC" Height="1"/>
