@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:ReolmarkedTeam15.Views"
+      xmlns:local="clr-namespace:ReolmarkedTeam15.Views" xmlns:viewmodels="clr-namespace:ReolmarkedTeam15.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:OrderViewModel}"
       mc:Ignorable="d" 
       d:DesignHeight="900" d:DesignWidth="900"
 
@@ -28,7 +28,7 @@
         <Label Grid.Column="0" Grid.Row="0" Content="Liste over varer i køb samt totalpris" Foreground="White" Margin="5,0,0,0"/>
 
         <!-- Liste i Datagrid-->
-        <DataGrid Grid.Column="0" Grid.Row="1" Background="White" ItemsSource="{Binding Products}" Margin="5,0,0,0" AutoGenerateColumns="False" BorderBrush="Transparent" Height="400" VerticalAlignment="Top">
+        <DataGrid Grid.Column="0" Grid.Row="1" Background="White" ItemsSource="{Binding ProductsInCart}" Margin="5,0,0,0" AutoGenerateColumns="False" BorderBrush="Transparent" Height="400" VerticalAlignment="Top">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Vare ID" Binding="{Binding ProductID }" Width="3*" IsReadOnly="True"/>
@@ -50,11 +50,11 @@
 
         <StackPanel Grid.Column="1" Grid.Row="1" Margin="20,0,20,0" >
         <!--Produkt ID TekstBoks-->
-        <TextBox Grid.Column="1" Grid.Row="1" Height="28"/>
+            <TextBox Grid.Column="1" Grid.Row="1" Height="28" Text="{Binding ProductIDInput, UpdateSourceTrigger=PropertyChanged}"/>
         <!-- Knapper til håndtering af Varer og Køb -->
-            <Button Grid.Column="1" Grid.Row="1" Margin="0,5,0,0" Content="Tilføj Vare" Height="28" HorizontalAlignment="Left" FontWeight="SemiBold" Width="100"/>
+            <Button Grid.Column="1" Grid.Row="1" Margin="0,5,0,0" Content="Tilføj Vare" Height="28" HorizontalAlignment="Left" FontWeight="SemiBold" Width="100" Command="{Binding AddProductToCartCommand}"/>
             <Button Grid.Column="1" Grid.Row="1" Margin="0,5,0,0" Content="Fjern Vare" Height="28" HorizontalAlignment="Left" FontWeight="SemiBold" Width="100" Foreground="White" Background="#793327"/>
-            <Button Grid.Column="1" Grid.Row="1" Margin="0,-94,0,0" Content="Færdiggør Køb" Height="28" HorizontalAlignment="Right" FontWeight="Bold" Width="110" Background="#d6b43e" />
+            <Button Grid.Column="1" Grid.Row="1" Margin="0,-94,0,0" Content="Færdiggør Køb" Height="28" HorizontalAlignment="Right" FontWeight="Bold" Width="110" Background="#d6b43e" Command="{Binding CheckOutCommand}" />
             <Button Grid.Column="1" Grid.Row="1" Margin="104,-28,0,0" Content="Købshistorik" Height="28" FontWeight="SemiBold" Width="110" />
         </StackPanel>
 

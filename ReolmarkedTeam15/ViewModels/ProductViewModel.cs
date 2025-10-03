@@ -121,7 +121,7 @@ namespace ReolmarkedTeam15.ViewModels
         //Add Product
         public void AddProduct()
         {
-            var newProduct = new Product(SelectedStall.StallID, ProductName, ProductDescription, Price, Product.PurchaseSituation.Hjemme);
+            var newProduct = new Product(SelectedStall.StallID, ProductName, ProductDescription, Price, PurchaseSituation.Hjemme);
             _productRepo.Add(newProduct);
             Products.Add(newProduct);
 

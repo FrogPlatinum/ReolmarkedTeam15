@@ -23,6 +23,7 @@ namespace ReolmarkedTeam15.Views
         private IStallRepo _stallRepo;
         private IRenterRepo _renterRepo;
         private IProductRepo _productRepo;
+        private IOrderRepo _orderRepo;
 
         public MainWindow()
         {
@@ -32,9 +33,10 @@ namespace ReolmarkedTeam15.Views
             _stallRepo = new MemoryStallRepo();
             _renterRepo = new MemoryRenterRepo();
             _productRepo = new MemoryProductRepo();
+            _orderRepo = new MemoryOrderRepo();
 
             //Passing repo to MainViewModel
-            DataContext = new MainViewModel(_stallRepo, _renterRepo, _productRepo);
+            DataContext = new MainViewModel(_stallRepo, _renterRepo, _productRepo, _orderRepo);
 
             MainFrame.Navigate(new FrontPageView()); //makes the program display FrontPageView on startup :)
         }
@@ -70,7 +72,7 @@ namespace ReolmarkedTeam15.Views
             var OrderView = new OrderView();
 
             //Order view context set to OrderViewModel
-            //OrderView.DataContext = new OrderViewModel(_orderRepo); Commented out until they're made.
+            OrderView.DataContext = ((MainViewModel)DataContext).OrderVM;
 
             MainFrame.Navigate(OrderView);
         }
@@ -80,7 +82,8 @@ namespace ReolmarkedTeam15.Views
             var ProductView = new ProductView();
 
             //Product view context set to ProductViewModel
-            ProductView.DataContext = new ProductViewModel(_productRepo, _stallRepo);
+            //ProductView.DataContext = new ProductViewModel(_productRepo, _stallRepo);
+            ProductView.DataContext = ((MainViewModel)DataContext).ProductVM;
 
             MainFrame.Navigate(ProductView);
         }

@@ -18,12 +18,14 @@ namespace ReolmarkedTeam15.ViewModels
         public StallViewModel StallVM { get; }
         public RenterViewModel RenterVM { get; }
         public ProductViewModel ProductVM { get; }
+        public OrderViewModel OrderVM { get; }
 
-        public MainViewModel(IStallRepo stallRepo, IRenterRepo renterRepo, IProductRepo productRepo)
+        public MainViewModel(IStallRepo stallRepo, IRenterRepo renterRepo, IProductRepo productRepo, IOrderRepo orderRepo)
         {
             StallVM = new StallViewModel(stallRepo);
             RenterVM = new RenterViewModel(renterRepo);
             ProductVM = new ProductViewModel(productRepo, stallRepo);
+            OrderVM = new OrderViewModel(orderRepo, productRepo);
 
 
             UpdateRenterStallCount();
