@@ -1,4 +1,5 @@
-﻿using ReolmarkedTeam15.Models;
+﻿using ReolmarkedTeam15.Interfaces;
+using ReolmarkedTeam15.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ using System.Windows.Controls;
 
 namespace ReolmarkedTeam15.Repos
 {
-    public class MemoryOrderRepo
+    public class MemoryOrderRepo : IOrderRepo
     {
         //Memory list for Orders
         private List<Order> _orderList = new List<Order>();
@@ -46,8 +47,9 @@ namespace ReolmarkedTeam15.Repos
                 throw new ArgumentNullException(nameof(order), "Null order not allowed.");
             }
         }
+
         //Get All
-        public IEnumerable<Order> GetAllOrders()
+        public IEnumerable<Order> GetAll()
         {
             return _orderList;
         }
@@ -62,7 +64,7 @@ namespace ReolmarkedTeam15.Repos
             return order;
         }
         //Update
-        public void Update(Order order)
+        public void UpdateOrder(Order order)
         {
             var currentOrder = _orderList.FirstOrDefault(o => o.OrderID == order.OrderID);
             if (currentOrder == null)
