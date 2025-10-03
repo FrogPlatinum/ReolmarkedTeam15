@@ -20,7 +20,6 @@
         <!-- Image -->
         <Image Source="/Views/F_f6c0LiMJZp2ubH.jpg" Margin="0,127,0,-219" Opacity="0.70" Width="600" HorizontalAlignment="Center"/>
         
-        <!-- Label with quote -->
-        <Label Content="'Inspirerende quote her! Fordi det bare er så hyggeligt!' -Jonas" Margin="0,100,0,0" HorizontalAlignment="Center" FontStyle="Italic"/>
+        
     </Grid>
 </Page>
