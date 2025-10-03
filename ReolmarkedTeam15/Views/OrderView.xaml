@@ -28,17 +28,22 @@
         <Label Grid.Column="0" Grid.Row="0" Content="Liste over varer i køb samt totalpris" Foreground="White" Margin="5,0,0,0"/>
 
         <!-- Liste i Datagrid-->
-        <DataGrid Grid.Column="0" Grid.Row="1" Background="#547076" ItemsSource="{Binding Products}" Margin="5,0,0,0" AutoGenerateColumns="False" BorderBrush="Transparent">
+        <DataGrid Grid.Column="0" Grid.Row="1" Background="White" ItemsSource="{Binding Products}" Margin="5,0,0,0" AutoGenerateColumns="False" BorderBrush="Transparent" Height="400" VerticalAlignment="Top">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Vare ID" Binding="{Binding ProductID }" Width="3*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Navn" Binding="{Binding ProductName }" Width="6*" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Pris (DKK)" Binding="{Binding Price }" Width="5*" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Totalpris (DKK)" Binding="{Binding PurchaseStatus }" Width="4*" IsReadOnly="True"/>
+                
 
             </DataGrid.Columns>
 
         </DataGrid>
+        
+        <!-- TotalPris for køb visning via to Labels (Binding via 2. label)-->
+        <Label Grid.Column="0" Grid.Row="2" Margin="490,400,0,0" Content="Total Pris:" Foreground="White" FontWeight="DemiBold"></Label>
+        <Label Grid.Column="0" Grid.Row="2" Margin="560,400,0,0" Content="Binding + DKK" Foreground="White" FontWeight="Bold" ></Label>
+        
 
         <!-- Tilføj Vare overskrift-->
         <Label Grid.Column="1" Grid.Row="0" Content="Tilføj Vare via ID" Margin="17,0,0,0" Foreground="White"/>
