@@ -20,6 +20,9 @@ namespace ReolmarkedTeam15.ViewModels
         //List for View
         public ObservableCollection<Product> ProductsInCart { get; }
 
+        //Orders list for History
+        private List<Order> _orderHistory = new List<Order>();
+
         //Wrappers
         private int _productIDInput;
         public int ProductIDInput
@@ -43,13 +46,20 @@ namespace ReolmarkedTeam15.ViewModels
             }
         }
 
+        //Commands
+        public ICommand AddProductToCartCommand { get; }
+
+
         //Constructor
         public OrderViewModel(IOrderRepo orderRepo, IProductRepo productRepo)
         {
             _orderRepo = orderRepo;
             _productRepo = productRepo;
+
+            AddProductToCartCommand = new RelayCommand(AddProductToCart);
         }
 
+        //Add with product id to cart
         private void AddProductToCart()
         {
             var product = _productRepo.GetAll().FirstOrDefault(p => p.ProductID == ProductIDInput);
@@ -60,6 +70,14 @@ namespace ReolmarkedTeam15.ViewModels
             }
             ProductsInCart.Add(product);
             OrderTotalPrice = ProductsInCart.Sum(p => p.Price);
+        }
+
+        private void CheckOut()
+        {
+            if(ProductsInCart.Count > 0)
+            {
+
+            }
         }
     }
 }

@@ -72,7 +72,7 @@ namespace ReolmarkedTeam15.Views
             var OrderView = new OrderView();
 
             //Order view context set to OrderViewModel
-            OrderView.DataContext = new OrderViewModel(_orderRepo, _productRepo);
+            OrderView.DataContext = ((MainViewModel)DataContext).OrderVM;
 
             MainFrame.Navigate(OrderView);
         }
