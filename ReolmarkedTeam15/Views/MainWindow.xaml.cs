@@ -82,7 +82,8 @@ namespace ReolmarkedTeam15.Views
             var ProductView = new ProductView();
 
             //Product view context set to ProductViewModel
-            ProductView.DataContext = new ProductViewModel(_productRepo, _stallRepo);
+            //ProductView.DataContext = new ProductViewModel(_productRepo, _stallRepo);
+            ProductView.DataContext = ((MainViewModel)DataContext).ProductVM;
 
             MainFrame.Navigate(ProductView);
         }

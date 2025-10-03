@@ -48,6 +48,7 @@ namespace ReolmarkedTeam15.ViewModels
 
         //Commands
         public ICommand AddProductToCartCommand { get; }
+        //public ICommand CheckOutCommand { get; }
 
 
         //Constructor
@@ -56,28 +57,30 @@ namespace ReolmarkedTeam15.ViewModels
             _orderRepo = orderRepo;
             _productRepo = productRepo;
 
+            ProductsInCart = new ObservableCollection<Product>();
+
             AddProductToCartCommand = new RelayCommand(AddProductToCart);
+            //CheckOutCommand = new RelayCommand(CheckOut);
         }
 
         //Add with product id to cart
         private void AddProductToCart()
         {
             var product = _productRepo.GetAll().FirstOrDefault(p => p.ProductID == ProductIDInput);
-            if (product == null)
-            {
-                throw new ArgumentException($"Genstand med ID {ProductIDInput} findes ikke");
-                return;
-            }
             ProductsInCart.Add(product);
             OrderTotalPrice = ProductsInCart.Sum(p => p.Price);
         }
 
-        private void CheckOut()
-        {
-            if(ProductsInCart.Count > 0)
-            {
-
-            }
-        }
+        //Didn't get to finish it :(
+        //private void CheckOut()
+        //{
+        //    if(ProductsInCart.Count > 0)
+        //    {
+        //        var newOrder = new Order
+        //        {
+        //            OrderID = newOrder.
+        //        };
+        //    }
+        //}
     }
 }
