@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:ReolmarkedTeam15"
              StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
-      
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Views/ButtonStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
